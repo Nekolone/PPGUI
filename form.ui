@@ -69,7 +69,7 @@
        <item>
         <widget class="QTabWidget" name="tabWidget">
          <property name="currentIndex">
-          <number>5</number>
+          <number>0</number>
          </property>
          <widget class="QWidget" name="robotTab">
           <attribute name="title">
@@ -111,7 +111,7 @@
                 <property name="title">
                  <string>Connect to robot</string>
                 </property>
-                <widget class="QLabel" name="robConIpLabel_2">
+                <widget class="QLabel" name="robConIpLabel">
                  <property name="geometry">
                   <rect>
                    <x>80</x>
@@ -130,7 +130,7 @@
                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                  </property>
                 </widget>
-                <widget class="QLineEdit" name="robConPassInp_2">
+                <widget class="QLineEdit" name="robConPassInp">
                  <property name="geometry">
                   <rect>
                    <x>170</x>
@@ -139,11 +139,14 @@
                    <height>22</height>
                   </rect>
                  </property>
+                 <property name="text">
+                  <string>abc123</string>
+                 </property>
                  <property name="clearButtonEnabled">
                   <bool>true</bool>
                  </property>
                 </widget>
-                <widget class="QPushButton" name="robConConnectButton_2">
+                <widget class="QPushButton" name="robConConnectButton">
                  <property name="enabled">
                   <bool>true</bool>
                  </property>
@@ -159,7 +162,7 @@
                   <string>Connect</string>
                  </property>
                 </widget>
-                <widget class="QLineEdit" name="robConIpInp_2">
+                <widget class="QLineEdit" name="robConIpInp">
                  <property name="geometry">
                   <rect>
                    <x>170</x>
@@ -171,11 +174,14 @@
                  <property name="inputMethodHints">
                   <set>Qt::ImhDigitsOnly</set>
                  </property>
+                 <property name="text">
+                  <string>192.168.253.84</string>
+                 </property>
                  <property name="clearButtonEnabled">
                   <bool>true</bool>
                  </property>
                 </widget>
-                <widget class="QLineEdit" name="robConUserInp_2">
+                <widget class="QLineEdit" name="robConUserInp">
                  <property name="geometry">
                   <rect>
                    <x>170</x>
@@ -184,11 +190,14 @@
                    <height>22</height>
                   </rect>
                  </property>
+                 <property name="text">
+                  <string>dummy</string>
+                 </property>
                  <property name="clearButtonEnabled">
                   <bool>true</bool>
                  </property>
                 </widget>
-                <widget class="QLabel" name="robConPassLabel_2">
+                <widget class="QLabel" name="robConPassLabel">
                  <property name="geometry">
                   <rect>
                    <x>80</x>
@@ -204,7 +213,7 @@
                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                  </property>
                 </widget>
-                <widget class="QLabel" name="robConUserLabel_2">
+                <widget class="QLabel" name="robConUserLabel">
                  <property name="geometry">
                   <rect>
                    <x>80</x>
@@ -220,7 +229,7 @@
                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                  </property>
                 </widget>
-                <widget class="QLineEdit" name="robConPassInp_3">
+                <widget class="QLineEdit" name="robConStatusOut">
                  <property name="geometry">
                   <rect>
                    <x>250</x>
@@ -241,7 +250,7 @@
                   <bool>true</bool>
                  </property>
                  <property name="clearButtonEnabled">
-                  <bool>true</bool>
+                  <bool>false</bool>
                  </property>
                 </widget>
                </widget>
@@ -496,7 +505,7 @@
                <number>0</number>
               </property>
               <item>
-               <widget class="QTextEdit" name="robotTextEdit">
+               <widget class="QTextEdit" name="robotTextOut">
                 <property name="enabled">
                  <bool>true</bool>
                 </property>
@@ -524,7 +533,7 @@
                </widget>
               </item>
               <item>
-               <widget class="QLineEdit" name="robotLineEdit">
+               <widget class="QLineEdit" name="robotLineInp">
                 <property name="enabled">
                  <bool>true</bool>
                 </property>
@@ -540,6 +549,387 @@
                </widget>
               </item>
              </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="presentationTab">
+          <attribute name="title">
+           <string>Presentation</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_5">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QWidget" name="presentationTop" native="true">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>72</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>9999</width>
+               <height>72</height>
+              </size>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_7">
+              <property name="topMargin">
+               <number>9</number>
+              </property>
+              <property name="bottomMargin">
+               <number>9</number>
+              </property>
+              <item>
+               <widget class="QGroupBox" name="addPresentation">
+                <property name="minimumSize">
+                 <size>
+                  <width>773</width>
+                  <height>54</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>9999</width>
+                  <height>54</height>
+                 </size>
+                </property>
+                <property name="title">
+                 <string>Add presentation</string>
+                </property>
+                <widget class="QLabel" name="selecyYourPptxFile">
+                 <property name="geometry">
+                  <rect>
+                   <x>210</x>
+                   <y>20</y>
+                   <width>150</width>
+                   <height>20</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Select your .pptx file</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+                <widget class="QLineEdit" name="pptxPathLine">
+                 <property name="geometry">
+                  <rect>
+                   <x>370</x>
+                   <y>21</y>
+                   <width>330</width>
+                   <height>20</height>
+                  </rect>
+                 </property>
+                 <property name="clearButtonEnabled">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+                <widget class="QToolButton" name="pptxFindFile">
+                 <property name="geometry">
+                  <rect>
+                   <x>700</x>
+                   <y>20</y>
+                   <width>22</width>
+                   <height>22</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>...</string>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="pptxAddButton">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="geometry">
+                  <rect>
+                   <x>721</x>
+                   <y>20</y>
+                   <width>40</width>
+                   <height>22</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>Add</string>
+                 </property>
+                </widget>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="presentatioBot" native="true">
+             <property name="maximumSize">
+              <size>
+               <width>9999</width>
+               <height>9999</height>
+              </size>
+             </property>
+             <widget class="QWidget" name="pptxAvailable" native="true">
+              <property name="geometry">
+               <rect>
+                <x>9</x>
+                <y>9</y>
+                <width>384</width>
+                <height>408</height>
+               </rect>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>384</width>
+                <height>408</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>9999</width>
+                <height>9999</height>
+               </size>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_2">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QTableWidget" name="pptxAvailableTable">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>408</height>
+                  </size>
+                 </property>
+                 <column>
+                  <property name="text">
+                   <string>Presentation name</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Status</string>
+                  </property>
+                 </column>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QGroupBox" name="pptxCtrlMenu">
+              <property name="geometry">
+               <rect>
+                <x>399</x>
+                <y>1</y>
+                <width>383</width>
+                <height>417</height>
+               </rect>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>417</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>383</width>
+                <height>390</height>
+               </size>
+              </property>
+              <property name="title">
+               <string>Presentation controll menu</string>
+              </property>
+              <property name="flat">
+               <bool>false</bool>
+              </property>
+              <property name="checkable">
+               <bool>false</bool>
+              </property>
+              <widget class="QLabel" name="selPresLabel">
+               <property name="geometry">
+                <rect>
+                 <x>40</x>
+                 <y>90</y>
+                 <width>120</width>
+                 <height>20</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>Selectet presentation</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+              <widget class="QLabel" name="valStatusLabel">
+               <property name="geometry">
+                <rect>
+                 <x>50</x>
+                 <y>170</y>
+                 <width>110</width>
+                 <height>20</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>Validation status</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+              <widget class="QLineEdit" name="selPresOutLine">
+               <property name="geometry">
+                <rect>
+                 <x>180</x>
+                 <y>90</y>
+                 <width>181</width>
+                 <height>22</height>
+                </rect>
+               </property>
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
+              </widget>
+              <widget class="QProgressBar" name="presProgressBar">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="geometry">
+                <rect>
+                 <x>190</x>
+                 <y>330</y>
+                 <width>170</width>
+                 <height>20</height>
+                </rect>
+               </property>
+               <property name="layoutDirection">
+                <enum>Qt::LeftToRight</enum>
+               </property>
+               <property name="autoFillBackground">
+                <bool>false</bool>
+               </property>
+               <property name="value">
+                <number>24</number>
+               </property>
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="invertedAppearance">
+                <bool>false</bool>
+               </property>
+               <property name="format">
+                <string>%p%</string>
+               </property>
+              </widget>
+              <widget class="QLabel" name="presProgressLabel">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="geometry">
+                <rect>
+                 <x>40</x>
+                 <y>330</y>
+                 <width>120</width>
+                 <height>20</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>Presentation progress</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+              <widget class="QLineEdit" name="valStatusOutLine">
+               <property name="geometry">
+                <rect>
+                 <x>180</x>
+                 <y>170</y>
+                 <width>120</width>
+                 <height>22</height>
+                </rect>
+               </property>
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="valPresCheckButton">
+               <property name="geometry">
+                <rect>
+                 <x>311</x>
+                 <y>169</y>
+                 <width>51</width>
+                 <height>24</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>Validate</string>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="startPres">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="geometry">
+                <rect>
+                 <x>70</x>
+                 <y>280</y>
+                 <width>100</width>
+                 <height>30</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>Start</string>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="stopPres">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="geometry">
+                <rect>
+                 <x>210</x>
+                 <y>280</y>
+                 <width>100</width>
+                 <height>30</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>Stop</string>
+               </property>
+              </widget>
+             </widget>
             </widget>
            </item>
           </layout>
@@ -565,7 +955,7 @@
             <number>9</number>
            </property>
            <item>
-            <widget class="QGroupBox" name="scrManAddNewScriptPlaceholder">
+            <widget class="QGroupBox" name="addScript">
              <property name="minimumSize">
               <size>
                <width>773</width>
@@ -575,7 +965,7 @@
              <property name="title">
               <string>Add script</string>
              </property>
-             <widget class="QLabel" name="label_2">
+             <widget class="QLabel" name="selScriptLabel">
               <property name="geometry">
                <rect>
                 <x>230</x>
@@ -593,10 +983,10 @@
                <string>Select your script</string>
               </property>
               <property name="alignment">
-               <set>Qt::AlignCenter</set>
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
               </property>
              </widget>
-             <widget class="QLineEdit" name="lineEdit_2">
+             <widget class="QLineEdit" name="selScriptPathInp">
               <property name="geometry">
                <rect>
                 <x>370</x>
@@ -609,7 +999,7 @@
                <bool>true</bool>
               </property>
              </widget>
-             <widget class="QToolButton" name="toolButton_2">
+             <widget class="QToolButton" name="scriptFindFile">
               <property name="geometry">
                <rect>
                 <x>700</x>
@@ -622,7 +1012,7 @@
                <string>...</string>
               </property>
              </widget>
-             <widget class="QPushButton" name="pushButton">
+             <widget class="QPushButton" name="scriptAddButton">
               <property name="enabled">
                <bool>false</bool>
               </property>
@@ -641,7 +1031,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QTableWidget" name="tableWidget">
+            <widget class="QTableWidget" name="scriptTable">
              <property name="enabled">
               <bool>false</bool>
              </property>
@@ -681,11 +1071,11 @@
            </item>
           </layout>
          </widget>
-         <widget class="QWidget" name="presentationTab">
+         <widget class="QWidget" name="behManTab">
           <attribute name="title">
-           <string>Presentation</string>
+           <string>Behaviour manager</string>
           </attribute>
-          <layout class="QVBoxLayout" name="verticalLayout_5">
+          <layout class="QVBoxLayout" name="verticalLayout_12">
            <property name="spacing">
             <number>0</number>
            </property>
@@ -702,356 +1092,33 @@
             <number>0</number>
            </property>
            <item>
-            <widget class="QWidget" name="widget" native="true">
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>72</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>9999</width>
-               <height>72</height>
-              </size>
-             </property>
-             <layout class="QVBoxLayout" name="verticalLayout_7">
-              <property name="topMargin">
-               <number>9</number>
-              </property>
-              <property name="bottomMargin">
-               <number>9</number>
-              </property>
+            <widget class="QWidget" name="behManWidget" native="true">
+             <layout class="QHBoxLayout" name="horizontalLayout_5">
               <item>
-               <widget class="QGroupBox" name="scrManAddNewScriptPlaceholder_2">
-                <property name="minimumSize">
-                 <size>
-                  <width>773</width>
-                  <height>54</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>9999</width>
-                  <height>54</height>
-                 </size>
-                </property>
-                <property name="title">
-                 <string>Add script</string>
-                </property>
-                <widget class="QLabel" name="label_5">
-                 <property name="geometry">
-                  <rect>
-                   <x>230</x>
-                   <y>20</y>
-                   <width>131</width>
-                   <height>20</height>
-                  </rect>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <pointsize>12</pointsize>
-                  </font>
-                 </property>
+               <widget class="QTableWidget" name="benManTable">
+                <column>
                  <property name="text">
-                  <string>Select your script</string>
+                  <string>Behavior name</string>
                  </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-                <widget class="QLineEdit" name="lineEdit_10">
-                 <property name="geometry">
-                  <rect>
-                   <x>370</x>
-                   <y>21</y>
-                   <width>330</width>
-                   <height>20</height>
-                  </rect>
-                 </property>
-                 <property name="clearButtonEnabled">
-                  <bool>true</bool>
-                 </property>
-                </widget>
-                <widget class="QToolButton" name="toolButton_6">
-                 <property name="geometry">
-                  <rect>
-                   <x>700</x>
-                   <y>20</y>
-                   <width>22</width>
-                   <height>22</height>
-                  </rect>
-                 </property>
+                </column>
+                <column>
                  <property name="text">
-                  <string>...</string>
+                  <string>Status</string>
                  </property>
-                </widget>
-                <widget class="QPushButton" name="pushButton_5">
-                 <property name="enabled">
-                  <bool>false</bool>
-                 </property>
-                 <property name="geometry">
-                  <rect>
-                   <x>721</x>
-                   <y>20</y>
-                   <width>40</width>
-                   <height>22</height>
-                  </rect>
-                 </property>
+                </column>
+                <column>
                  <property name="text">
-                  <string>Add</string>
+                  <string>Controll</string>
                  </property>
-                </widget>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Info</string>
+                 </property>
+                </column>
                </widget>
               </item>
              </layout>
-            </widget>
-           </item>
-           <item>
-            <widget class="QWidget" name="widget_7" native="true">
-             <property name="maximumSize">
-              <size>
-               <width>9999</width>
-               <height>9999</height>
-              </size>
-             </property>
-             <widget class="QWidget" name="widget_11" native="true">
-              <property name="geometry">
-               <rect>
-                <x>9</x>
-                <y>9</y>
-                <width>384</width>
-                <height>408</height>
-               </rect>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>384</width>
-                <height>408</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>9999</width>
-                <height>9999</height>
-               </size>
-              </property>
-              <layout class="QHBoxLayout" name="horizontalLayout_2">
-               <property name="spacing">
-                <number>0</number>
-               </property>
-               <property name="leftMargin">
-                <number>0</number>
-               </property>
-               <property name="topMargin">
-                <number>0</number>
-               </property>
-               <property name="rightMargin">
-                <number>0</number>
-               </property>
-               <property name="bottomMargin">
-                <number>0</number>
-               </property>
-               <item>
-                <widget class="QTableWidget" name="tableWidget_4">
-                 <property name="minimumSize">
-                  <size>
-                   <width>0</width>
-                   <height>408</height>
-                  </size>
-                 </property>
-                 <column>
-                  <property name="text">
-                   <string>Presentation name</string>
-                  </property>
-                 </column>
-                 <column>
-                  <property name="text">
-                   <string>Status</string>
-                  </property>
-                 </column>
-                </widget>
-               </item>
-              </layout>
-             </widget>
-             <widget class="QGroupBox" name="groupBox_12">
-              <property name="geometry">
-               <rect>
-                <x>399</x>
-                <y>1</y>
-                <width>383</width>
-                <height>417</height>
-               </rect>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>0</width>
-                <height>417</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>383</width>
-                <height>390</height>
-               </size>
-              </property>
-              <property name="title">
-               <string>Presentation controll menu</string>
-              </property>
-              <property name="flat">
-               <bool>false</bool>
-              </property>
-              <property name="checkable">
-               <bool>false</bool>
-              </property>
-              <widget class="QLabel" name="label_13">
-               <property name="geometry">
-                <rect>
-                 <x>40</x>
-                 <y>90</y>
-                 <width>120</width>
-                 <height>20</height>
-                </rect>
-               </property>
-               <property name="text">
-                <string>Selectet presentation</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-               </property>
-              </widget>
-              <widget class="QLabel" name="label_14">
-               <property name="geometry">
-                <rect>
-                 <x>50</x>
-                 <y>170</y>
-                 <width>110</width>
-                 <height>20</height>
-                </rect>
-               </property>
-               <property name="text">
-                <string>Validation status</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-               </property>
-              </widget>
-              <widget class="QLineEdit" name="lineEdit_8">
-               <property name="geometry">
-                <rect>
-                 <x>180</x>
-                 <y>90</y>
-                 <width>181</width>
-                 <height>22</height>
-                </rect>
-               </property>
-               <property name="readOnly">
-                <bool>true</bool>
-               </property>
-              </widget>
-              <widget class="QProgressBar" name="progressBar_3">
-               <property name="enabled">
-                <bool>false</bool>
-               </property>
-               <property name="geometry">
-                <rect>
-                 <x>190</x>
-                 <y>330</y>
-                 <width>160</width>
-                 <height>20</height>
-                </rect>
-               </property>
-               <property name="value">
-                <number>24</number>
-               </property>
-               <property name="orientation">
-                <enum>Qt::Horizontal</enum>
-               </property>
-               <property name="invertedAppearance">
-                <bool>false</bool>
-               </property>
-               <property name="format">
-                <string>%p%</string>
-               </property>
-              </widget>
-              <widget class="QLabel" name="label_15">
-               <property name="enabled">
-                <bool>false</bool>
-               </property>
-               <property name="geometry">
-                <rect>
-                 <x>40</x>
-                 <y>330</y>
-                 <width>120</width>
-                 <height>20</height>
-                </rect>
-               </property>
-               <property name="text">
-                <string>Presentation progress</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-               </property>
-              </widget>
-              <widget class="QLineEdit" name="lineEdit_9">
-               <property name="geometry">
-                <rect>
-                 <x>180</x>
-                 <y>170</y>
-                 <width>120</width>
-                 <height>22</height>
-                </rect>
-               </property>
-               <property name="readOnly">
-                <bool>true</bool>
-               </property>
-              </widget>
-              <widget class="QPushButton" name="pushButton_20">
-               <property name="geometry">
-                <rect>
-                 <x>311</x>
-                 <y>169</y>
-                 <width>51</width>
-                 <height>24</height>
-                </rect>
-               </property>
-               <property name="text">
-                <string>Validate</string>
-               </property>
-              </widget>
-              <widget class="QPushButton" name="pushButton_21">
-               <property name="enabled">
-                <bool>false</bool>
-               </property>
-               <property name="geometry">
-                <rect>
-                 <x>70</x>
-                 <y>280</y>
-                 <width>100</width>
-                 <height>30</height>
-                </rect>
-               </property>
-               <property name="text">
-                <string>Start</string>
-               </property>
-              </widget>
-              <widget class="QPushButton" name="pushButton_22">
-               <property name="enabled">
-                <bool>false</bool>
-               </property>
-               <property name="geometry">
-                <rect>
-                 <x>210</x>
-                 <y>280</y>
-                 <width>100</width>
-                 <height>30</height>
-                </rect>
-               </property>
-               <property name="text">
-                <string>Stop</string>
-               </property>
-              </widget>
-             </widget>
             </widget>
            </item>
           </layout>
@@ -1077,7 +1144,7 @@
             <number>0</number>
            </property>
            <item>
-            <widget class="QWidget" name="widget_8" native="true">
+            <widget class="QWidget" name="slideTop" native="true">
              <property name="minimumSize">
               <size>
                <width>0</width>
@@ -1092,7 +1159,7 @@
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_11">
               <item>
-               <widget class="QTextEdit" name="textEdit">
+               <widget class="QTextEdit" name="slideNoteOut">
                 <property name="html">
                  <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -1120,7 +1187,7 @@ p, li { white-space: pre-wrap; }
             </widget>
            </item>
            <item>
-            <widget class="QWidget" name="widget_3" native="true">
+            <widget class="QWidget" name="slideBot" native="true">
              <layout class="QGridLayout" name="gridLayout">
               <item row="0" column="0">
                <widget class="QPushButton" name="pushButton_6">
@@ -1225,7 +1292,7 @@ p, li { white-space: pre-wrap; }
             <number>0</number>
            </property>
            <item>
-            <widget class="QWidget" name="widget_4" native="true">
+            <widget class="QWidget" name="surveyTop" native="true">
              <property name="maximumSize">
               <size>
                <width>9999</width>
@@ -1234,7 +1301,7 @@ p, li { white-space: pre-wrap; }
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_10">
               <item>
-               <widget class="QTextEdit" name="textEdit_2">
+               <widget class="QTextEdit" name="surveyOut">
                 <property name="html">
                  <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -1261,8 +1328,8 @@ p, li { white-space: pre-wrap; }
             </widget>
            </item>
            <item>
-            <widget class="QWidget" name="widget_6" native="true">
-             <widget class="QGroupBox" name="groupBox">
+            <widget class="QWidget" name="surveyBot" native="true">
+             <widget class="QGroupBox" name="surveyController">
               <property name="geometry">
                <rect>
                 <x>286</x>
@@ -1284,9 +1351,9 @@ p, li { white-space: pre-wrap; }
                </size>
               </property>
               <property name="title">
-               <string>GroupBox</string>
+               <string>Survey constructor</string>
               </property>
-              <widget class="QPushButton" name="pushButton_3">
+              <widget class="QPushButton" name="survAddQButton">
                <property name="geometry">
                 <rect>
                  <x>30</x>
@@ -1299,7 +1366,7 @@ p, li { white-space: pre-wrap; }
                 <string>Add new question</string>
                </property>
               </widget>
-              <widget class="QLabel" name="label">
+              <widget class="QLabel" name="selUnitLabel">
                <property name="geometry">
                 <rect>
                  <x>40</x>
@@ -1315,7 +1382,7 @@ p, li { white-space: pre-wrap; }
                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                </property>
               </widget>
-              <widget class="QLineEdit" name="lineEdit">
+              <widget class="QLineEdit" name="selUnitOut">
                <property name="geometry">
                 <rect>
                  <x>150</x>
@@ -1331,7 +1398,7 @@ p, li { white-space: pre-wrap; }
                 <bool>true</bool>
                </property>
               </widget>
-              <widget class="QLineEdit" name="lineEdit_6">
+              <widget class="QLineEdit" name="survQInp">
                <property name="geometry">
                 <rect>
                  <x>150</x>
@@ -1344,7 +1411,7 @@ p, li { white-space: pre-wrap; }
                 <bool>true</bool>
                </property>
               </widget>
-              <widget class="QCheckBox" name="checkBox">
+              <widget class="QCheckBox" name="survMultiQCB">
                <property name="geometry">
                 <rect>
                  <x>413</x>
@@ -1357,7 +1424,7 @@ p, li { white-space: pre-wrap; }
                 <string>multiple</string>
                </property>
               </widget>
-              <widget class="QPushButton" name="pushButton_18">
+              <widget class="QPushButton" name="delSelectedItemButton">
                <property name="geometry">
                 <rect>
                  <x>412</x>
@@ -1370,7 +1437,7 @@ p, li { white-space: pre-wrap; }
                 <string>delete</string>
                </property>
               </widget>
-              <widget class="QLabel" name="label_3">
+              <widget class="QLabel" name="survTimeLabel">
                <property name="geometry">
                 <rect>
                  <x>40</x>
@@ -1386,7 +1453,7 @@ p, li { white-space: pre-wrap; }
                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                </property>
               </widget>
-              <widget class="QCheckBox" name="checkBox_2">
+              <widget class="QCheckBox" name="survCorrAnswCB">
                <property name="geometry">
                 <rect>
                  <x>413</x>
@@ -1399,7 +1466,7 @@ p, li { white-space: pre-wrap; }
                 <string>correct</string>
                </property>
               </widget>
-              <widget class="QPushButton" name="pushButton_17">
+              <widget class="QPushButton" name="survAddAnswButton">
                <property name="geometry">
                 <rect>
                  <x>30</x>
@@ -1412,7 +1479,7 @@ p, li { white-space: pre-wrap; }
                 <string>Add answer</string>
                </property>
               </widget>
-              <widget class="QLineEdit" name="lineEdit_7">
+              <widget class="QLineEdit" name="survAnswInp">
                <property name="geometry">
                 <rect>
                  <x>150</x>
@@ -1425,7 +1492,7 @@ p, li { white-space: pre-wrap; }
                 <bool>true</bool>
                </property>
               </widget>
-              <widget class="QLineEdit" name="lineEdit_11">
+              <widget class="QLineEdit" name="survTimeInp">
                <property name="geometry">
                 <rect>
                  <x>150</x>
@@ -1438,7 +1505,7 @@ p, li { white-space: pre-wrap; }
                 <bool>true</bool>
                </property>
               </widget>
-              <widget class="QPushButton" name="pushButton_19">
+              <widget class="QPushButton" name="survTimeSetButton">
                <property name="geometry">
                 <rect>
                  <x>203</x>
@@ -1451,8 +1518,34 @@ p, li { white-space: pre-wrap; }
                 <string>set</string>
                </property>
               </widget>
+              <widget class="QLabel" name="label_4">
+               <property name="geometry">
+                <rect>
+                 <x>70</x>
+                 <y>250</y>
+                 <width>221</width>
+                 <height>16</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>ЕБАБНЫЙ РОТ ЭТОГО КАЗИНО</string>
+               </property>
+              </widget>
+              <widget class="QLabel" name="label_7">
+               <property name="geometry">
+                <rect>
+                 <x>70</x>
+                 <y>280</y>
+                 <width>221</width>
+                 <height>16</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>ТЫ КТО ТАКОЙ ЧТОБ ЭТО ДЕЛАТЬ</string>
+               </property>
+              </widget>
              </widget>
-             <widget class="QTreeWidget" name="treeWidget">
+             <widget class="QTreeWidget" name="surveyTreeWidget">
               <property name="geometry">
                <rect>
                 <x>9</x>
@@ -1541,9 +1634,9 @@ p, li { white-space: pre-wrap; }
            </item>
           </layout>
          </widget>
-         <widget class="QWidget" name="systemTab">
+         <widget class="QWidget" name="toolkitTab">
           <attribute name="title">
-           <string>PC system</string>
+           <string>Toolkit</string>
           </attribute>
           <layout class="QVBoxLayout" name="verticalLayout_9">
            <property name="spacing">

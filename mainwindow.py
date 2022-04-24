@@ -12,7 +12,7 @@ from PySide6.QtUiTools import QUiLoader
 from initial.main_window_handler import MainWindowHandler
 
 
-def connect_all_and_make_shiny(window: QWidget) -> MainWindowHandler:
+def make_shiny_and_connect_all(window: QWidget) -> MainWindowHandler:
     handler = MainWindowHandler(window)
     handler.make_shiny()
     handler.connect()
@@ -27,9 +27,8 @@ if __name__ == "__main__":
     loader = QUiLoader()
     window = loader.load(ui_file, None)
 
-    windowHandler = connect_all_and_make_shiny(window)
-    windowHandler.window\
-        .findChild(PySide6.QtWidgets.QLineEdit, "robotLineEdit").setEnabled(True)
+    windowHandler = make_shiny_and_connect_all(window)
+    # windowHandler.window.findChild(PySide6.QtWidgets.QLineEdit, "robotLineEdit").setEnabled(True)
     # window.findChild(PySide6.QtWidgets.QLineEdit, "robotLineEdit").returnPressed.connect(lambda: print("hihihaha"))
     # window.main.returnPressed.connect(lambda :print("hihihaha"))
     # window.findChild(PySide6.QtWidgets.QListWidget, "listWidget").addItem(QListWidgetItem("hihihaha"))
