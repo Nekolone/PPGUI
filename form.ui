@@ -108,6 +108,9 @@
              <layout class="QHBoxLayout" name="horizontalLayout_4">
               <item>
                <widget class="QGroupBox" name="robConGroupBox">
+                <property name="enabled">
+                 <bool>true</bool>
+                </property>
                 <property name="title">
                  <string>Connect to robot</string>
                 </property>
@@ -234,7 +237,7 @@
                   <rect>
                    <x>250</x>
                    <y>170</y>
-                   <width>113</width>
+                   <width>128</width>
                    <height>30</height>
                   </rect>
                  </property>
@@ -274,7 +277,7 @@
               <item>
                <widget class="QGroupBox" name="robSysGroupBox">
                 <property name="enabled">
-                 <bool>false</bool>
+                 <bool>true</bool>
                 </property>
                 <property name="title">
                  <string>Device resource usage</string>
@@ -411,7 +414,7 @@
                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                  </property>
                 </widget>
-                <widget class="QPushButton" name="robSysRebooButton">
+                <widget class="QPushButton" name="robSysRebootButton">
                  <property name="enabled">
                   <bool>false</bool>
                  </property>
@@ -476,6 +479,9 @@
            </item>
            <item>
             <widget class="QWidget" name="robotTabBot" native="true">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
              <property name="minimumSize">
               <size>
                <width>0</width>
@@ -507,7 +513,7 @@
               <item>
                <widget class="QTextEdit" name="robotTextOut">
                 <property name="enabled">
-                 <bool>true</bool>
+                 <bool>false</bool>
                 </property>
                 <property name="font">
                  <font>
@@ -535,7 +541,7 @@
               <item>
                <widget class="QLineEdit" name="robotLineInp">
                 <property name="enabled">
-                 <bool>true</bool>
+                 <bool>false</bool>
                 </property>
                 <property name="font">
                  <font>
