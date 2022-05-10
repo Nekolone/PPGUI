@@ -45,6 +45,7 @@ class MainWindowHandler:
 
     def make_shiny(self):
         self.robot_connection.make_shiny()
+        self.presentation_connection.make_shiny()
         pass
 
     def connect(self):

@@ -156,7 +156,7 @@ class RobotConnector:
 
     def exec_single_command(self, command) -> string:
         try:
-            return "".join([j for i in self.ssh_conn.ssh.exec_command(command)[1] if i != "" for j in i.readlines()])
+            return "".join([j for i in self.ssh_conn.ssh.exec_command(command)[1:] if i != "" for j in i.readlines()])
         except (ConnectionResetError, paramiko.SSHException, socket.error):
             self.connection_status = "DISCONNECTED"
 
@@ -166,14 +166,15 @@ class RobotConnector:
 
     def update_robot_stats(self):
         while self.thread_status:
+
             self.window.findChild(QLineEdit, "robSysCpuOut").setText(self.connection_handler_single_com(
-                """top -b -n2 -p 1 | fgrep "Cpu(s)" | tail -1 | awk -F'id,' -v prefix="$prefix" '{ split($1, vs, ","); v=vs[length(vs)]; sub("%", "", v); printf "%s%.1f%%\n", prefix, 100 - v }'"""
+                r"""top -b -n2 -p 1 | fgrep "Cpu(s)" | tail -1 | awk -F'id,' -v prefix="$prefix" '{ split($1, vs, ","); v=vs[length(vs)]; sub("%", "", v); printf "%s%.1f%%\n", prefix, 100 - v }'"""
             ))
             self.window.findChild(QLineEdit, "robSysRamOut").setText(self.connection_handler_single_com(
-                """free | grep "Mem" | awk '{printf("%d / %d\n", $3, $2)}'"""
+                r"""free -m | grep "Mem" | awk '{printf("%dM / %dM\n", $3, $2)}'"""
             ))
             self.window.findChild(QLineEdit, "robSysUptimeOut").setText(self.connection_handler_single_com(
-                """awk '{print int(($1/3600)/24)"d:"int($1/3600)"h:"int(($1%3600)/60)"m:"int($1%60)"s"}' /proc/uptime"""
+                """awk '{print int(($1/3600)/24)"d:"int(($1/3600)%60)"h:"int(($1%3600)/60)"m:"int($1%60)"s"}' /proc/uptime"""
             ))
 
     """

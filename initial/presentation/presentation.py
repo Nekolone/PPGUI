@@ -1,13 +1,15 @@
+import os
 import socket
 import string
 import threading
 import time
 
 import paramiko as paramiko
+from PySide6.QtCore import *
 from PySide6.QtWidgets import *
 
 from initial.ssh_handler import ShellHandler
-from initial.utility import activate_if_not_blank
+from initial.utility import activate_if_not_blank, add_file_to_storage
 
 
 class PresentationConnector:
@@ -18,7 +20,12 @@ class PresentationConnector:
 
         self._pres_status = False
 
-        # self.present_depend_status = present_depend_status
+        self.file_list = []
+        self._selected_item = None
+        self._pres_dir_path = fr"{os.environ['USERPROFILE']}\Documents\NaoGuiShellStorage"
+        self.pres_dir = QDir(self._pres_dir_path)
+        if not self.pres_dir.exists():
+            self.pres_dir.mkpath(self._pres_dir_path)
 
     """
     GETTERS & SETTERS
@@ -34,6 +41,37 @@ class PresentationConnector:
         self.window.findChild(QPushButton, "stopPres").setEnabled(value)
         self._pres_status = value
 
+    @property
+    def selected_item(self) -> QListWidgetItem:
+        return self._selected_item
+
+    @selected_item.setter
+    def selected_item(self, item: QListWidgetItem):
+        self._selected_item = item
+
+    def new_item_selected(self) -> QListWidgetItem:
+        self.selected_item = [
+            res for res in self.window.findChild(QListWidget, "pptxAvailableTable").findItems(".pptx", Qt.MatchContains)
+            if res.isSelected()
+        ][0]
+        return self.selected_item
+
+    def update_pres_table(self):
+        self.pres_dir = QDir(fr"{os.environ['USERPROFILE']}\Documents\NaoGuiShellStorage")
+        self.pres_dir.entryList()
+        # QListWidget.clear
+        self.window.findChild(QListWidget, "pptxAvailableTable").clear()
+        self.file_list = self.pres_dir.entryList(["*.pptx", QDir.Files])
+        # self.window.findChild(QTableWidget, "pptxAvailableTable").setRowCount(len(self.file_list))
+        for fileName, fileNum in zip(self.file_list, range(len(self.file_list))):
+            # print(fileName, fileNum, self.file_list)
+            self.window.findChild(QListWidget, "pptxAvailableTable").addItem(QListWidgetItem(fileName))
+            # self.window.findChild(QListWidget, "pptxAvailableTable").
+            # QListWidget.sil
+            # self.window.findChild(QListWidget, "pptxAvailableTable").findItems(fileName, Qt.MatchContains)[0].clicked.connect(lambda: print(fileName))
+            # QListWidgetItem.
+            # self.window.findChild(QTableWidget, "pptxAvailableTable").setItem(fileNum, 0, QTableWidgetItem(fileName))
+            # QListWidgetItem.
 
     """
     TRIGGERS
@@ -48,13 +86,16 @@ class PresentationConnector:
 
     def setup_triggers(self):
         self.window.findChild(QToolButton, "pptxFindFile").clicked.connect(
-            lambda: self.set_file_path(self.window.findChild(QLineEdit, "pptxPathLine")))
+            lambda: self.set_file_path(self.window.findChild(QLineEdit, "pptxPathLine"))
+        )
         self.window.findChild(QLineEdit, "pptxPathLine").textChanged.connect(
             lambda: activate_if_not_blank(self.window.findChild(QLineEdit, "pptxPathLine"),
-                                          self.window.findChild(QPushButton, "pptxAddButton")))
-        # self.window.findChild(QPushButton, "pptxAddButton").clkiced.connect(
-        #
-        # )
+                                          self.window.findChild(QPushButton, "pptxAddButton"))
+        )
+        self.window.findChild(QPushButton, "pptxAddButton").clicked.connect(lambda: self.add_presentation())
+        self.window.findChild(QListWidget, "pptxAvailableTable").clicked.connect(
+            lambda: self.select_presentation(self.new_item_selected())
+        )
 
         """
         .....
@@ -75,6 +116,13 @@ class PresentationConnector:
     def stop_presentation(self):
         self.pres_status = False
 
+    def add_presentation(self):
+        add_file_to_storage(self.window.findChild(QLineEdit, "pptxPathLine").text())
+        self.update_pres_table()
+
+    def select_presentation(self, selected_item: QListWidgetItem):
+        self.window.findChild(QLineEdit, "selPresOutLine").setText(selected_item.text())
+
     """
     DESIGN
     """
@@ -83,6 +131,14 @@ class PresentationConnector:
         pass
 
     def make_shiny(self):
-        pass
+        self.setup_table()
         # while self.inf_status:
         #     time.sleep(1)
+
+    def setup_table(self):
+        self.update_pres_table()
+        # QListWidget.addItem(self.window.findChild(QPushButton, "pptxAddButton"))
+        # self.window.findChild(QListWidget, "pptxAvailableTable").addItem("123")
+        # self.window.findChild(QTableWidget, "pptxAvailableTable").setColumnWidth(1, 118)
+        # self.window.findChild(QTableWidget, "pptxAvailableTable").setItem(1,1,QTableWidgetItem("зызызыз"))
+

@@ -444,7 +444,7 @@
                   <rect>
                    <x>160</x>
                    <y>100</y>
-                   <width>113</width>
+                   <width>161</width>
                    <height>22</height>
                   </rect>
                  </property>
@@ -731,23 +731,18 @@
                 <number>0</number>
                </property>
                <item>
-                <widget class="QTableWidget" name="pptxAvailableTable">
+                <widget class="QListWidget" name="pptxAvailableTable">
                  <property name="minimumSize">
                   <size>
                    <width>0</width>
                    <height>408</height>
                   </size>
                  </property>
-                 <column>
+                 <item>
                   <property name="text">
-                   <string>Presentation name</string>
+                   <string>el1</string>
                   </property>
-                 </column>
-                 <column>
-                  <property name="text">
-                   <string>Status</string>
-                  </property>
-                 </column>
+                 </item>
                 </widget>
                </item>
               </layout>
