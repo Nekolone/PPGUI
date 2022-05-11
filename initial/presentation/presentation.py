@@ -72,6 +72,23 @@ class PresentationConnector:
             # QListWidgetItem.
             # self.window.findChild(QTableWidget, "pptxAvailableTable").setItem(fileNum, 0, QTableWidgetItem(fileName))
             # QListWidgetItem.
+    def validate_cur_pres(self):
+        self.window.findChild(QLineEdit, "valStatusOutLine").setText(".")
+        time.sleep(0.3)
+        self.window.findChild(QLineEdit, "valStatusOutLine").setText("..")
+        time.sleep(0.3)
+        self.window.findChild(QLineEdit, "valStatusOutLine").setText("...")
+        time.sleep(0.3)
+        self.window.findChild(QLineEdit, "valStatusOutLine").setText("....")
+        time.sleep(0.3)
+        self.window.findChild(QLineEdit, "valStatusOutLine").setText(".....")
+        time.sleep(0.3)
+        self.window.findChild(QLineEdit, "valStatusOutLine").setText("......")
+        time.sleep(0.3)
+        self.window.findChild(QLineEdit, "valStatusOutLine").setText(".......")
+        time.sleep(0.3)
+        self.window.findChild(QLineEdit, "valStatusOutLine").setText("Success")
+
 
     """
     TRIGGERS
@@ -105,6 +122,8 @@ class PresentationConnector:
             lambda: activate_if_not_blank(self.window.findChild(QLineEdit, "selPresOutLine"),
                                           self.window.findChild(QPushButton, "startPres")))
 
+        self.window.findChild(QPushButton, "valPresCheckButton").clicked.connect(
+            lambda: threading.Thread(target=self.validate_cur_pres, args=()).start())
         self.window.findChild(QPushButton, "startPres").clicked.connect(
             lambda: self.start_presentation())
         self.window.findChild(QPushButton, "stopPres").clicked.connect(
@@ -122,6 +141,12 @@ class PresentationConnector:
 
     def select_presentation(self, selected_item: QListWidgetItem):
         self.window.findChild(QLineEdit, "selPresOutLine").setText(selected_item.text())
+        self.window.findChild(QPushButton, "valPresCheckButton").setEnabled(True)
+        self.window.findChild(QLineEdit, "valStatusOutLine").setEnabled(True)
+        self.window.findChild(QLineEdit, "valStatusOutLine").clear()
+
+
+
 
     """
     DESIGN

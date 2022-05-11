@@ -69,7 +69,7 @@
        <item>
         <widget class="QTabWidget" name="tabWidget">
          <property name="currentIndex">
-          <number>1</number>
+          <number>2</number>
          </property>
          <widget class="QWidget" name="robotTab">
           <attribute name="title">
@@ -738,11 +738,6 @@
                    <height>408</height>
                   </size>
                  </property>
-                 <item>
-                  <property name="text">
-                   <string>el1</string>
-                  </property>
-                 </item>
                 </widget>
                </item>
               </layout>
@@ -819,6 +814,9 @@
                 </rect>
                </property>
                <property name="readOnly">
+                <bool>true</bool>
+               </property>
+               <property name="clearButtonEnabled">
                 <bool>false</bool>
                </property>
               </widget>
@@ -873,6 +871,9 @@
                </property>
               </widget>
               <widget class="QLineEdit" name="valStatusOutLine">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
                <property name="geometry">
                 <rect>
                  <x>180</x>
@@ -886,6 +887,9 @@
                </property>
               </widget>
               <widget class="QPushButton" name="valPresCheckButton">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
                <property name="geometry">
                 <rect>
                  <x>311</x>
@@ -930,6 +934,22 @@
                 <string>Stop</string>
                </property>
               </widget>
+              <widget class="QPushButton" name="delPresCheckButton">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="geometry">
+                <rect>
+                 <x>311</x>
+                 <y>116</y>
+                 <width>51</width>
+                 <height>24</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>Delete</string>
+               </property>
+              </widget>
              </widget>
             </widget>
            </item>
@@ -939,135 +959,290 @@
           <attribute name="title">
            <string>Script manager</string>
           </attribute>
-          <layout class="QVBoxLayout" name="verticalLayout_4">
+          <layout class="QVBoxLayout" name="verticalLayout_13">
            <property name="spacing">
-            <number>18</number>
+            <number>0</number>
            </property>
            <property name="leftMargin">
-            <number>9</number>
+            <number>0</number>
            </property>
            <property name="topMargin">
-            <number>9</number>
+            <number>0</number>
            </property>
            <property name="rightMargin">
-            <number>9</number>
+            <number>0</number>
            </property>
            <property name="bottomMargin">
-            <number>9</number>
+            <number>0</number>
            </property>
            <item>
-            <widget class="QGroupBox" name="addScript">
+            <widget class="QWidget" name="scriptTop" native="true">
              <property name="minimumSize">
               <size>
-               <width>773</width>
-               <height>54</height>
+               <width>0</width>
+               <height>72</height>
               </size>
              </property>
-             <property name="title">
-              <string>Add script</string>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>72</height>
+              </size>
              </property>
-             <widget class="QLabel" name="selScriptLabel">
-              <property name="geometry">
-               <rect>
-                <x>230</x>
-                <y>20</y>
-                <width>131</width>
-                <height>20</height>
-               </rect>
-              </property>
-              <property name="font">
-               <font>
-                <pointsize>12</pointsize>
-               </font>
-              </property>
-              <property name="text">
-               <string>Select your script</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-              </property>
-             </widget>
-             <widget class="QLineEdit" name="selScriptPathInp">
-              <property name="geometry">
-               <rect>
-                <x>370</x>
-                <y>21</y>
-                <width>330</width>
-                <height>20</height>
-               </rect>
-              </property>
-              <property name="clearButtonEnabled">
-               <bool>true</bool>
-              </property>
-             </widget>
-             <widget class="QToolButton" name="scriptFindFile">
-              <property name="geometry">
-               <rect>
-                <x>700</x>
-                <y>20</y>
-                <width>22</width>
-                <height>22</height>
-               </rect>
-              </property>
-              <property name="text">
-               <string>...</string>
-              </property>
-             </widget>
-             <widget class="QPushButton" name="scriptAddButton">
-              <property name="enabled">
-               <bool>false</bool>
-              </property>
-              <property name="geometry">
-               <rect>
-                <x>721</x>
-                <y>20</y>
-                <width>40</width>
-                <height>22</height>
-               </rect>
-              </property>
-              <property name="text">
-               <string>Add</string>
-              </property>
-             </widget>
+             <layout class="QVBoxLayout" name="verticalLayout_4">
+              <item>
+               <widget class="QGroupBox" name="addScript">
+                <property name="minimumSize">
+                 <size>
+                  <width>773</width>
+                  <height>54</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>773</width>
+                  <height>54</height>
+                 </size>
+                </property>
+                <property name="title">
+                 <string>Add script</string>
+                </property>
+                <widget class="QLabel" name="selScriptLabel">
+                 <property name="geometry">
+                  <rect>
+                   <x>230</x>
+                   <y>20</y>
+                   <width>131</width>
+                   <height>20</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Select your script</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+                <widget class="QLineEdit" name="selScriptPathInp">
+                 <property name="geometry">
+                  <rect>
+                   <x>370</x>
+                   <y>21</y>
+                   <width>330</width>
+                   <height>20</height>
+                  </rect>
+                 </property>
+                 <property name="clearButtonEnabled">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+                <widget class="QToolButton" name="scriptFindFile">
+                 <property name="geometry">
+                  <rect>
+                   <x>700</x>
+                   <y>20</y>
+                   <width>22</width>
+                   <height>22</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>...</string>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="scriptAddButton">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="geometry">
+                  <rect>
+                   <x>721</x>
+                   <y>20</y>
+                   <width>40</width>
+                   <height>22</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>Add</string>
+                 </property>
+                </widget>
+               </widget>
+              </item>
+             </layout>
             </widget>
            </item>
            <item>
-            <widget class="QTableWidget" name="scriptTable">
-             <property name="enabled">
-              <bool>false</bool>
+            <widget class="QWidget" name="scriptBot" native="true">
+             <property name="maximumSize">
+              <size>
+               <width>9999</width>
+               <height>9999</height>
+              </size>
              </property>
-             <column>
-              <property name="text">
-               <string>Script name</string>
+             <widget class="QWidget" name="pyAvailable" native="true">
+              <property name="geometry">
+               <rect>
+                <x>9</x>
+                <y>9</y>
+                <width>384</width>
+                <height>408</height>
+               </rect>
               </property>
-              <property name="font">
-               <font>
-                <strikeout>false</strikeout>
-                <stylestrategy>PreferDefault</stylestrategy>
-                <kerning>true</kerning>
-               </font>
+              <property name="minimumSize">
+               <size>
+                <width>384</width>
+                <height>408</height>
+               </size>
               </property>
-             </column>
-             <column>
-              <property name="text">
-               <string>Status</string>
+              <property name="maximumSize">
+               <size>
+                <width>9999</width>
+                <height>9999</height>
+               </size>
               </property>
-             </column>
-             <column>
-              <property name="text">
-               <string>Control</string>
+              <layout class="QHBoxLayout" name="horizontalLayout_3">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QListWidget" name="pyAvailableList">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>408</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QGroupBox" name="scriptControllMenu">
+              <property name="geometry">
+               <rect>
+                <x>399</x>
+                <y>1</y>
+                <width>383</width>
+                <height>417</height>
+               </rect>
               </property>
-             </column>
-             <column>
-              <property name="text">
-               <string>Info</string>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>417</height>
+               </size>
               </property>
-             </column>
-             <column>
-              <property name="text">
-               <string>Del</string>
+              <property name="maximumSize">
+               <size>
+                <width>383</width>
+                <height>390</height>
+               </size>
               </property>
-             </column>
+              <property name="title">
+               <string>Script controll menu</string>
+              </property>
+              <property name="flat">
+               <bool>false</bool>
+              </property>
+              <property name="checkable">
+               <bool>false</bool>
+              </property>
+              <widget class="QLabel" name="selScriptLabel_2">
+               <property name="geometry">
+                <rect>
+                 <x>40</x>
+                 <y>120</y>
+                 <width>120</width>
+                 <height>20</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>Selectet script</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+              <widget class="QLineEdit" name="selScriptOutLine">
+               <property name="geometry">
+                <rect>
+                 <x>180</x>
+                 <y>120</y>
+                 <width>181</width>
+                 <height>22</height>
+                </rect>
+               </property>
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
+               <property name="clearButtonEnabled">
+                <bool>false</bool>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="startScript">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="geometry">
+                <rect>
+                 <x>70</x>
+                 <y>280</y>
+                 <width>100</width>
+                 <height>30</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>Start</string>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="stopScript">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="geometry">
+                <rect>
+                 <x>210</x>
+                 <y>280</y>
+                 <width>100</width>
+                 <height>30</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>Stop</string>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="delScriptButton">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="geometry">
+                <rect>
+                 <x>311</x>
+                 <y>146</y>
+                 <width>51</width>
+                 <height>24</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>Delete</string>
+               </property>
+              </widget>
+             </widget>
             </widget>
            </item>
           </layout>
@@ -1096,27 +1271,129 @@
             <widget class="QWidget" name="behManWidget" native="true">
              <layout class="QHBoxLayout" name="horizontalLayout_5">
               <item>
-               <widget class="QTableWidget" name="benManTable">
-                <column>
-                 <property name="text">
-                  <string>Behavior name</string>
+               <widget class="QWidget" name="widget" native="true">
+                <layout class="QHBoxLayout" name="horizontalLayout_7">
+                 <property name="spacing">
+                  <number>0</number>
                  </property>
-                </column>
-                <column>
-                 <property name="text">
-                  <string>Status</string>
+                 <property name="leftMargin">
+                  <number>0</number>
                  </property>
-                </column>
-                <column>
-                 <property name="text">
-                  <string>Controll</string>
+                 <property name="rightMargin">
+                  <number>0</number>
                  </property>
-                </column>
-                <column>
-                 <property name="text">
-                  <string>Info</string>
+                 <property name="bottomMargin">
+                  <number>0</number>
                  </property>
-                </column>
+                 <item>
+                  <widget class="QListWidget" name="benManTable"/>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QGroupBox" name="scriptControllMenu_2">
+                <property name="minimumSize">
+                 <size>
+                  <width>383</width>
+                  <height>417</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>383</width>
+                  <height>999</height>
+                 </size>
+                </property>
+                <property name="title">
+                 <string>Behaviour controll menu</string>
+                </property>
+                <property name="flat">
+                 <bool>false</bool>
+                </property>
+                <property name="checkable">
+                 <bool>false</bool>
+                </property>
+                <widget class="QLabel" name="selScriptLabel_3">
+                 <property name="geometry">
+                  <rect>
+                   <x>40</x>
+                   <y>120</y>
+                   <width>120</width>
+                   <height>20</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>Selectet behaviour</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+                <widget class="QLineEdit" name="selScriptOutLine_2">
+                 <property name="geometry">
+                  <rect>
+                   <x>180</x>
+                   <y>120</y>
+                   <width>181</width>
+                   <height>22</height>
+                  </rect>
+                 </property>
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                 <property name="clearButtonEnabled">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="startScript_2">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="geometry">
+                  <rect>
+                   <x>70</x>
+                   <y>280</y>
+                   <width>100</width>
+                   <height>30</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>Start</string>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="stopScript_2">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="geometry">
+                  <rect>
+                   <x>210</x>
+                   <y>280</y>
+                   <width>100</width>
+                   <height>30</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>Stop</string>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="delScriptButton_2">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="geometry">
+                  <rect>
+                   <x>311</x>
+                   <y>146</y>
+                   <width>51</width>
+                   <height>24</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>Delete</string>
+                 </property>
+                </widget>
                </widget>
               </item>
              </layout>
