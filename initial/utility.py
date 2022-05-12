@@ -19,3 +19,8 @@ def add_file_to_storage(filepath: string):
     except FileExistsError:
         pass
     shutil.copy(filepath, fr"{os.environ['USERPROFILE']}\Documents\NaoGuiShellStorage")
+
+
+def set_file_path(label: QLabel):
+    filepath = QFileDialog.getOpenFileUrl(caption="Select file")[0].toLocalFile()
+    label.setText(filepath)

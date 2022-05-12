@@ -9,7 +9,7 @@ from PySide6.QtCore import *
 from PySide6.QtWidgets import *
 
 from initial.ssh_handler import ShellHandler
-from initial.utility import activate_if_not_blank, add_file_to_storage
+from initial.utility import *
 
 
 class PresentationConnector:
@@ -72,6 +72,7 @@ class PresentationConnector:
             # QListWidgetItem.
             # self.window.findChild(QTableWidget, "pptxAvailableTable").setItem(fileNum, 0, QTableWidgetItem(fileName))
             # QListWidgetItem.
+
     def validate_cur_pres(self):
         self.window.findChild(QLineEdit, "valStatusOutLine").setText(".")
         time.sleep(0.3)
@@ -89,7 +90,6 @@ class PresentationConnector:
         time.sleep(0.3)
         self.window.findChild(QLineEdit, "valStatusOutLine").setText("Success")
 
-
     """
     TRIGGERS
     """
@@ -97,13 +97,13 @@ class PresentationConnector:
     def find_pptx(self):
         pass
 
-    def set_file_path(self, label: QLabel):
-        filepath = QFileDialog.getOpenFileUrl(caption="Select file")[0].toLocalFile()
-        label.setText(filepath)
+    # def set_file_path(self, label: QLabel):
+    #     filepath = QFileDialog.getOpenFileUrl(caption="Select file")[0].toLocalFile()
+    #     label.setText(filepath)
 
     def setup_triggers(self):
         self.window.findChild(QToolButton, "pptxFindFile").clicked.connect(
-            lambda: self.set_file_path(self.window.findChild(QLineEdit, "pptxPathLine"))
+            lambda: set_file_path(self.window.findChild(QLineEdit, "pptxPathLine"))
         )
         self.window.findChild(QLineEdit, "pptxPathLine").textChanged.connect(
             lambda: activate_if_not_blank(self.window.findChild(QLineEdit, "pptxPathLine"),
@@ -121,6 +121,9 @@ class PresentationConnector:
         self.window.findChild(QLineEdit, "selPresOutLine").textChanged.connect(
             lambda: activate_if_not_blank(self.window.findChild(QLineEdit, "selPresOutLine"),
                                           self.window.findChild(QPushButton, "startPres")))
+        self.window.findChild(QLineEdit, "selPresOutLine").textChanged.connect(
+            lambda: activate_if_not_blank(self.window.findChild(QLineEdit, "selPresOutLine"),
+                                          self.window.findChild(QPushButton, "delPresCheckButton")))
 
         self.window.findChild(QPushButton, "valPresCheckButton").clicked.connect(
             lambda: threading.Thread(target=self.validate_cur_pres, args=()).start())
@@ -128,6 +131,8 @@ class PresentationConnector:
             lambda: self.start_presentation())
         self.window.findChild(QPushButton, "stopPres").clicked.connect(
             lambda: self.stop_presentation())
+        self.window.findChild(QPushButton, "delPresCheckButton").clicked.connect(
+            lambda: self.delete_cur_pres())
 
     def start_presentation(self):
         self.pres_status = True
@@ -139,14 +144,15 @@ class PresentationConnector:
         add_file_to_storage(self.window.findChild(QLineEdit, "pptxPathLine").text())
         self.update_pres_table()
 
+    def delete_cur_pres(self):
+        self.pres_dir.remove(self.selected_item.text())
+        self.update_pres_table()
+
     def select_presentation(self, selected_item: QListWidgetItem):
         self.window.findChild(QLineEdit, "selPresOutLine").setText(selected_item.text())
         self.window.findChild(QPushButton, "valPresCheckButton").setEnabled(True)
         self.window.findChild(QLineEdit, "valStatusOutLine").setEnabled(True)
         self.window.findChild(QLineEdit, "valStatusOutLine").clear()
-
-
-
 
     """
     DESIGN
@@ -166,4 +172,3 @@ class PresentationConnector:
         # self.window.findChild(QListWidget, "pptxAvailableTable").addItem("123")
         # self.window.findChild(QTableWidget, "pptxAvailableTable").setColumnWidth(1, 118)
         # self.window.findChild(QTableWidget, "pptxAvailableTable").setItem(1,1,QTableWidgetItem("зызызыз"))
-
