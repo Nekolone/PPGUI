@@ -24,3 +24,7 @@ def add_file_to_storage(filepath: string):
 def set_file_path(label: QLabel):
     filepath = QFileDialog.getOpenFileUrl(caption="Select file")[0].toLocalFile()
     label.setText(filepath)
+
+
+def bind(instance, func, as_name):
+    setattr(instance, as_name, func.__get__(instance, instance.__class__))

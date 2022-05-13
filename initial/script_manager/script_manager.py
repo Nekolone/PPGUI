@@ -20,12 +20,15 @@ class ScriptManager:
 
         self._script_status = False
 
+        self.sp = QProcess()
+        self.sp.finished.connect(lambda: self.stop_script())
+
         self.file_list = []
         self._selected_item = None
-        self._script_dir_path = fr"{os.environ['USERPROFILE']}\Documents\NaoGuiShellStorage"
-        self.script_dir = QDir(self._script_dir_path)
+        self.script_dir_path = fr"{os.environ['USERPROFILE']}\Documents\NaoGuiShellStorage"
+        self.script_dir = QDir(self.script_dir_path)
         if not self.script_dir.exists():
-            self.script_dir.mkpath(self._script_dir_path)
+            self.script_dir.mkpath(self.script_dir_path)
 
     """
     GETTERS & SETTERS
@@ -117,6 +120,8 @@ class ScriptManager:
 
     def stop_script(self):
         self.script_status = False
+        self.sp.kill()
+
 
     def add_script(self):
         add_file_to_storage(self.window.findChild(QLineEdit, "selScriptPathInp").text())
@@ -140,7 +145,6 @@ class ScriptManager:
         self.setup_table()
         # while self.inf_status:
         #     time.sleep(1)
-
 
     def setup_table(self):
         self.update_script_table()

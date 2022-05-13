@@ -69,7 +69,7 @@
        <item>
         <widget class="QTabWidget" name="tabWidget">
          <property name="currentIndex">
-          <number>2</number>
+          <number>5</number>
          </property>
          <widget class="QWidget" name="robotTab">
           <attribute name="title">
@@ -143,7 +143,7 @@
                   </rect>
                  </property>
                  <property name="text">
-                  <string>abc123</string>
+                  <string>nao</string>
                  </property>
                  <property name="clearButtonEnabled">
                   <bool>true</bool>
@@ -178,7 +178,7 @@
                   <set>Qt::ImhDigitsOnly</set>
                  </property>
                  <property name="text">
-                  <string>192.168.253.84</string>
+                  <string>192.168.252.65</string>
                  </property>
                  <property name="clearButtonEnabled">
                   <bool>true</bool>
@@ -194,7 +194,7 @@
                   </rect>
                  </property>
                  <property name="text">
-                  <string>dummy</string>
+                  <string>nao</string>
                  </property>
                  <property name="clearButtonEnabled">
                   <bool>true</bool>
@@ -533,6 +533,13 @@
                 <property name="readOnly">
                  <bool>true</bool>
                 </property>
+                <property name="html">
+                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Consolas'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
                 <property name="cursorWidth">
                  <number>1</number>
                 </property>
@@ -839,7 +846,7 @@
                 <bool>false</bool>
                </property>
                <property name="value">
-                <number>24</number>
+                <number>0</number>
                </property>
                <property name="orientation">
                 <enum>Qt::Horizontal</enum>
@@ -948,6 +955,25 @@
                </property>
                <property name="text">
                 <string>Delete</string>
+               </property>
+              </widget>
+              <widget class="QCheckBox" name="intConnection">
+               <property name="geometry">
+                <rect>
+                 <x>180</x>
+                 <y>120</y>
+                 <width>131</width>
+                 <height>20</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>internet connection</string>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+               <property name="tristate">
+                <bool>false</bool>
                </property>
               </widget>
              </widget>
@@ -1286,7 +1312,52 @@
                   <number>0</number>
                  </property>
                  <item>
-                  <widget class="QListWidget" name="benManTable"/>
+                  <widget class="QListWidget" name="benManTable">
+                   <item>
+                    <property name="text">
+                     <string>animations/Sit/Emotions/Negative/Angry_1</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>animations/Sit/BodyTalk/Speaking/BodyTalk_1
+animations/Sit/BodyTalk/Speaking/BodyTalk_10
+animations/Sit/BodyTalk/Speaking/BodyTalk_11
+animations/Sit/BodyTalk/Speaking/BodyTalk_12
+animations/Sit/BodyTalk/Speaking/BodyTalk_2
+animations/Sit/BodyTalk/Speaking/BodyTalk_3
+animations/Sit/BodyTalk/Speaking/BodyTalk_4
+animations/Sit/BodyTalk/Speaking/BodyTalk_5
+animations/Sit/BodyTalk/Speaking/BodyTalk_6
+animations/Sit/BodyTalk/Speaking/BodyTalk_7
+animations/Sit/BodyTalk/Speaking/BodyTalk_8
+animations/Sit/BodyTalk/Speaking/BodyTalk_9
+animations/Sit/BodyTalk/Thinking/Remember_1
+animations/Sit/BodyTalk/Thinking/Remember_2
+animations/Sit/BodyTalk/Thinking/Remember_3
+animations/Sit/BodyTalk/Thinking/ThinkingLoop_1</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>animations/Sit/Waiting/ZenCircles_1
+animations/SitOnPod/BodyTalk/Listening/Listening_1
+animations/SitOnPod/BodyTalk/Listening/Listening_2
+animations/SitOnPod/BodyTalk/Listening/Listening_3
+animations/SitOnPod/BodyTalk/Listening/Listening_4
+animations/SitOnPod/BodyTalk/Listening/Listening_5
+animations/SitOnPod/BodyTalk/Listening/Listening_6
+animations/SitOnPod/BodyTalk/Listening/Listening_7
+animations/SitOnPod/BodyTalk/Listening/Listening_8
+animations/SitOnPod/BodyTalk/Speaking/BodyTalk_1
+animations/SitOnPod/BodyTalk/Speaking/BodyTalk_10
+animations/SitOnPod/BodyTalk/Speaking/BodyTalk_11
+animations/SitOnPod/BodyTalk/Speaking/BodyTalk_12
+animations/SitOnPod/BodyTalk/Speaking/BodyTalk_2
+animations/SitOnPod/BodyTalk/Speaking/BodyTalk_3</string>
+                    </property>
+                   </item>
+                  </widget>
                  </item>
                 </layout>
                </widget>
@@ -1339,6 +1410,9 @@
                    <height>22</height>
                   </rect>
                  </property>
+                 <property name="text">
+                  <string>animations/Sit/Emotions/Negative/Angry_1</string>
+                 </property>
                  <property name="readOnly">
                   <bool>true</bool>
                  </property>
@@ -1348,7 +1422,7 @@
                 </widget>
                 <widget class="QPushButton" name="startBeh">
                  <property name="enabled">
-                  <bool>false</bool>
+                  <bool>true</bool>
                  </property>
                  <property name="geometry">
                   <rect>
@@ -1380,7 +1454,7 @@
                 </widget>
                 <widget class="QPushButton" name="delBehButton">
                  <property name="enabled">
-                  <bool>false</bool>
+                  <bool>true</bool>
                  </property>
                  <property name="geometry">
                   <rect>
@@ -1443,7 +1517,8 @@
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:12pt; color:#000000;&quot;&gt;I am here to answer one question. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:12pt; color:#000000;&quot;&gt;&amp;lt;next/&amp;gt; What &amp;lt;pause time=“400”/&amp;gt; is Nao?&lt;/span&gt; &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
               </item>
@@ -1453,81 +1528,451 @@ p, li { white-space: pre-wrap; }
            <item>
             <widget class="QWidget" name="slideBot" native="true">
              <layout class="QGridLayout" name="gridLayout">
-              <item row="0" column="0">
-               <widget class="QPushButton" name="pushButton_6">
-                <property name="text">
-                 <string>PushButton</string>
+              <item row="0" column="4">
+               <widget class="QWidget" name="widget_12" native="true">
+                <property name="maximumSize">
+                 <size>
+                  <width>185</width>
+                  <height>16777215</height>
+                 </size>
                 </property>
-               </widget>
-              </item>
-              <item row="3" column="0">
-               <widget class="QPushButton" name="pushButton_12">
-                <property name="text">
-                 <string>PushButton</string>
-                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_25">
+                 <item>
+                  <widget class="QPushButton" name="pushButton_24">
+                   <property name="toolTip">
+                    <string>qwdwqdqw</string>
+                   </property>
+                   <property name="statusTip">
+                    <string/>
+                   </property>
+                   <property name="whatsThis">
+                    <string/>
+                   </property>
+                   <property name="accessibleName">
+                    <string/>
+                   </property>
+                   <property name="accessibleDescription">
+                    <string/>
+                   </property>
+                   <property name="text">
+                    <string>RMODE</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_12"/>
+                 </item>
+                </layout>
                </widget>
               </item>
               <item row="3" column="2">
-               <widget class="QPushButton" name="pushButton_8">
-                <property name="text">
-                 <string>PushButton</string>
+               <widget class="QWidget" name="widget_10" native="true">
+                <property name="maximumSize">
+                 <size>
+                  <width>185</width>
+                  <height>16777215</height>
+                 </size>
                 </property>
+                <layout class="QVBoxLayout" name="verticalLayout_23">
+                 <item>
+                  <widget class="QPushButton" name="pushButton_22">
+                   <property name="toolTip">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#000000; vertical-align:top;&quot;&gt;pause speech&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#000000; vertical-align:top;&quot;&gt;example:&lt;br/&gt;&amp;lt;pause/&amp;gt;&lt;br/&gt;&amp;lt;pause time=&amp;quot;150&amp;quot;/&amp;gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="statusTip">
+                    <string/>
+                   </property>
+                   <property name="whatsThis">
+                    <string/>
+                   </property>
+                   <property name="accessibleName">
+                    <string/>
+                   </property>
+                   <property name="accessibleDescription">
+                    <string/>
+                   </property>
+                   <property name="text">
+                    <string>SET</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_10"/>
+                 </item>
+                </layout>
                </widget>
               </item>
-              <item row="0" column="2">
-               <widget class="QPushButton" name="pushButton_9">
-                <property name="text">
-                 <string>PushButton</string>
+              <item row="3" column="6">
+               <widget class="QWidget" name="widget_9" native="true">
+                <property name="maximumSize">
+                 <size>
+                  <width>185</width>
+                  <height>16777215</height>
+                 </size>
                 </property>
+                <layout class="QVBoxLayout" name="verticalLayout_22">
+                 <item>
+                  <widget class="QPushButton" name="pushButton_21">
+                   <property name="toolTip">
+                    <string>qwdwqdqw</string>
+                   </property>
+                   <property name="statusTip">
+                    <string/>
+                   </property>
+                   <property name="whatsThis">
+                    <string/>
+                   </property>
+                   <property name="accessibleName">
+                    <string/>
+                   </property>
+                   <property name="accessibleDescription">
+                    <string/>
+                   </property>
+                   <property name="text">
+                    <string>EMPH</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_9"/>
+                 </item>
+                </layout>
                </widget>
               </item>
-              <item row="0" column="3">
-               <widget class="QPushButton" name="pushButton_10">
-                <property name="text">
-                 <string>PushButton</string>
+              <item row="0" column="6">
+               <widget class="QWidget" name="widget_4" native="true">
+                <property name="maximumSize">
+                 <size>
+                  <width>185</width>
+                  <height>16777215</height>
+                 </size>
                 </property>
+                <layout class="QVBoxLayout" name="verticalLayout_18">
+                 <item>
+                  <widget class="QPushButton" name="pushButton_17">
+                   <property name="toolTip">
+                    <string>qwdwqdqw</string>
+                   </property>
+                   <property name="statusTip">
+                    <string/>
+                   </property>
+                   <property name="whatsThis">
+                    <string/>
+                   </property>
+                   <property name="accessibleName">
+                    <string/>
+                   </property>
+                   <property name="accessibleDescription">
+                    <string/>
+                   </property>
+                   <property name="text">
+                    <string>SURVEY</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_5"/>
+                 </item>
+                </layout>
                </widget>
               </item>
-              <item row="1" column="0">
-               <widget class="QPushButton" name="pushButton_15">
-                <property name="text">
-                 <string>PushButton</string>
+              <item row="2" column="3">
+               <widget class="QWidget" name="widget_3" native="true">
+                <property name="maximumSize">
+                 <size>
+                  <width>185</width>
+                  <height>16777215</height>
+                 </size>
                 </property>
+                <layout class="QVBoxLayout" name="verticalLayout_17">
+                 <item>
+                  <widget class="QPushButton" name="pushButton_13">
+                   <property name="toolTip">
+                    <string>qwdwqdqw</string>
+                   </property>
+                   <property name="statusTip">
+                    <string/>
+                   </property>
+                   <property name="whatsThis">
+                    <string/>
+                   </property>
+                   <property name="accessibleName">
+                    <string/>
+                   </property>
+                   <property name="accessibleDescription">
+                    <string/>
+                   </property>
+                   <property name="text">
+                    <string>AUDIO</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_4"/>
+                 </item>
+                </layout>
                </widget>
               </item>
-              <item row="0" column="1">
-               <widget class="QPushButton" name="pushButton_7">
-                <property name="text">
-                 <string>PushButton</string>
+              <item row="2" column="6">
+               <widget class="QWidget" name="widget_11" native="true">
+                <property name="maximumSize">
+                 <size>
+                  <width>185</width>
+                  <height>16777215</height>
+                 </size>
                 </property>
+                <layout class="QVBoxLayout" name="verticalLayout_24">
+                 <item>
+                  <widget class="QPushButton" name="pushButton_23">
+                   <property name="toolTip">
+                    <string>for executing animations or behaviour
+example
+do animation=“animations/Stand/Waiting/TakePicture_1” /do
+</string>
+                   </property>
+                   <property name="statusTip">
+                    <string/>
+                   </property>
+                   <property name="whatsThis">
+                    <string/>
+                   </property>
+                   <property name="accessibleName">
+                    <string/>
+                   </property>
+                   <property name="accessibleDescription">
+                    <string/>
+                   </property>
+                   <property name="text">
+                    <string>DO</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_11"/>
+                 </item>
+                </layout>
                </widget>
               </item>
-              <item row="3" column="1">
-               <widget class="QPushButton" name="pushButton_11">
-                <property name="text">
-                 <string>PushButton</string>
+              <item row="2" column="4">
+               <widget class="QWidget" name="widget_6" native="true">
+                <property name="maximumSize">
+                 <size>
+                  <width>185</width>
+                  <height>16777215</height>
+                 </size>
                 </property>
+                <layout class="QVBoxLayout" name="verticalLayout_19">
+                 <item>
+                  <widget class="QPushButton" name="pushButton_18">
+                   <property name="toolTip">
+                    <string>qwdwqdqw</string>
+                   </property>
+                   <property name="statusTip">
+                    <string/>
+                   </property>
+                   <property name="whatsThis">
+                    <string/>
+                   </property>
+                   <property name="accessibleName">
+                    <string/>
+                   </property>
+                   <property name="accessibleDescription">
+                    <string/>
+                   </property>
+                   <property name="text">
+                    <string>RST</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_6"/>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="3" column="4">
+               <widget class="QWidget" name="widget_8" native="true">
+                <property name="maximumSize">
+                 <size>
+                  <width>185</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_21">
+                 <item>
+                  <widget class="QPushButton" name="pushButton_20">
+                   <property name="toolTip">
+                    <string>qwdwqdqw</string>
+                   </property>
+                   <property name="statusTip">
+                    <string/>
+                   </property>
+                   <property name="whatsThis">
+                    <string/>
+                   </property>
+                   <property name="accessibleName">
+                    <string/>
+                   </property>
+                   <property name="accessibleDescription">
+                    <string/>
+                   </property>
+                   <property name="text">
+                    <string>RSPD</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_8"/>
+                 </item>
+                </layout>
                </widget>
               </item>
               <item row="3" column="3">
-               <widget class="QPushButton" name="pushButton_13">
-                <property name="text">
-                 <string>PushButton</string>
+               <widget class="QWidget" name="widget_7" native="true">
+                <property name="maximumSize">
+                 <size>
+                  <width>185</width>
+                  <height>16777215</height>
+                 </size>
                 </property>
+                <layout class="QVBoxLayout" name="verticalLayout_20">
+                 <item>
+                  <widget class="QPushButton" name="pushButton_19">
+                   <property name="toolTip">
+                    <string>qwdwqdqw</string>
+                   </property>
+                   <property name="statusTip">
+                    <string/>
+                   </property>
+                   <property name="whatsThis">
+                    <string/>
+                   </property>
+                   <property name="accessibleName">
+                    <string/>
+                   </property>
+                   <property name="accessibleDescription">
+                    <string/>
+                   </property>
+                   <property name="text">
+                    <string>VOL</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_7"/>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="0" column="3">
+               <widget class="QWidget" name="widget_2" native="true">
+                <property name="maximumSize">
+                 <size>
+                  <width>185</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_16">
+                 <item>
+                  <widget class="QPushButton" name="pushButton_12">
+                   <property name="toolTip">
+                    <string>qwdwqdqw</string>
+                   </property>
+                   <property name="statusTip">
+                    <string/>
+                   </property>
+                   <property name="whatsThis">
+                    <string/>
+                   </property>
+                   <property name="accessibleName">
+                    <string/>
+                   </property>
+                   <property name="accessibleDescription">
+                    <string/>
+                   </property>
+                   <property name="text">
+                    <string>VIDEO</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_3"/>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="QWidget" name="widget" native="true">
+                <property name="maximumSize">
+                 <size>
+                  <width>185</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_14">
+                 <item>
+                  <widget class="QPushButton" name="pushButton_6">
+                   <property name="toolTip">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#24292f; background-color:#ffffff;&quot;&gt;trigger slide transition &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#24292f; background-color:#ffffff;&quot;&gt;example:&lt;br/&gt;&amp;lt;&lt;/span&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#000000; background-color:#ffffff;&quot;&gt;next&lt;/span&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#24292f; background-color:#ffffff;&quot;&gt;/&amp;gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="statusTip">
+                    <string/>
+                   </property>
+                   <property name="whatsThis">
+                    <string/>
+                   </property>
+                   <property name="accessibleName">
+                    <string/>
+                   </property>
+                   <property name="accessibleDescription">
+                    <string/>
+                   </property>
+                   <property name="text">
+                    <string>NEXT</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit"/>
+                 </item>
+                </layout>
                </widget>
               </item>
               <item row="2" column="2">
-               <widget class="QPushButton" name="pushButton_16">
-                <property name="text">
-                 <string>PushButton</string>
+               <widget class="QWidget" name="widget_13" native="true">
+                <property name="maximumSize">
+                 <size>
+                  <width>185</width>
+                  <height>16777215</height>
+                 </size>
                 </property>
-               </widget>
-              </item>
-              <item row="2" column="0">
-               <widget class="QPushButton" name="pushButton_14">
-                <property name="text">
-                 <string>PushButton</string>
-                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_26">
+                 <item>
+                  <widget class="QPushButton" name="pushButton_25">
+                   <property name="toolTip">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#000000; vertical-align:top;&quot;&gt;pause speech&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#000000; vertical-align:top;&quot;&gt;example:&lt;br/&gt;&amp;lt;pause/&amp;gt;&lt;br/&gt;&amp;lt;pause time=&amp;quot;150&amp;quot;/&amp;gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="statusTip">
+                    <string/>
+                   </property>
+                   <property name="whatsThis">
+                    <string/>
+                   </property>
+                   <property name="accessibleName">
+                    <string/>
+                   </property>
+                   <property name="accessibleDescription">
+                    <string/>
+                   </property>
+                   <property name="text">
+                    <string>PAUSE</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_13"/>
+                 </item>
+                </layout>
                </widget>
               </item>
              </layout>
@@ -1571,20 +2016,30 @@ p, li { white-space: pre-wrap; }
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;1231&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;1&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;1&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;1&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;1&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;1&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;1&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;1&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;1&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&amp;lt;survey id=&amp;quot;2&amp;quot;&amp;gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    &amp;lt;pin&amp;gt;0A2X&amp;lt;/pin&amp;gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    &amp;lt;type&amp;gt;auto&amp;lt;/type&amp;gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    &amp;lt;questions&amp;gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;        &amp;lt;question&amp;gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;            &amp;lt;q&amp;gt;What is nao?&amp;lt;/q&amp;gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;            &amp;lt;validoption&amp;gt;1&amp;lt;/validoption&amp;gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;            &amp;lt;options&amp;gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;                &amp;lt;o&amp;gt;Humanoid robot&amp;lt;/o&amp;gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;                &amp;lt;o&amp;gt;National Audit Office&amp;lt;/o&amp;gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;            &amp;lt;/options&amp;gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;        &amp;lt;/question&amp;gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;        &amp;lt;question&amp;gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;            &amp;lt;q&amp;gt;What is the second letter?&amp;lt;/q&amp;gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;            &amp;lt;timelimit&amp;gt;10&amp;lt;/timelimit&amp;gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;            &amp;lt;validoption&amp;gt;2&amp;lt;/validoption&amp;gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;            &amp;lt;options&amp;gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;                &amp;lt;o&amp;gt;Z&amp;lt;/o&amp;gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;                &amp;lt;o&amp;gt;B&amp;lt;/o&amp;gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;                &amp;lt;o&amp;gt;O&amp;lt;/o&amp;gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;            &amp;lt;/options&amp;gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;        &amp;lt;/question&amp;gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    &amp;lt;/questions&amp;gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&amp;lt;/survey&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
               </item>
@@ -1621,7 +2076,7 @@ p, li { white-space: pre-wrap; }
                <property name="geometry">
                 <rect>
                  <x>30</x>
-                 <y>80</y>
+                 <y>138</y>
                  <width>110</width>
                  <height>22</height>
                 </rect>
@@ -1634,7 +2089,7 @@ p, li { white-space: pre-wrap; }
                <property name="geometry">
                 <rect>
                  <x>40</x>
-                 <y>131</y>
+                 <y>188</y>
                  <width>100</width>
                  <height>20</height>
                 </rect>
@@ -1650,10 +2105,13 @@ p, li { white-space: pre-wrap; }
                <property name="geometry">
                 <rect>
                  <x>150</x>
-                 <y>131</y>
+                 <y>188</y>
                  <width>260</width>
                  <height>20</height>
                 </rect>
+               </property>
+               <property name="text">
+                <string/>
                </property>
                <property name="frame">
                 <bool>false</bool>
@@ -1666,7 +2124,7 @@ p, li { white-space: pre-wrap; }
                <property name="geometry">
                 <rect>
                  <x>150</x>
-                 <y>81</y>
+                 <y>139</y>
                  <width>260</width>
                  <height>20</height>
                 </rect>
@@ -1679,7 +2137,7 @@ p, li { white-space: pre-wrap; }
                <property name="geometry">
                 <rect>
                  <x>413</x>
-                 <y>81</y>
+                 <y>139</y>
                  <width>76</width>
                  <height>20</height>
                 </rect>
@@ -1692,7 +2150,7 @@ p, li { white-space: pre-wrap; }
                <property name="geometry">
                 <rect>
                  <x>412</x>
-                 <y>130</y>
+                 <y>187</y>
                  <width>61</width>
                  <height>22</height>
                 </rect>
@@ -1705,7 +2163,7 @@ p, li { white-space: pre-wrap; }
                <property name="geometry">
                 <rect>
                  <x>40</x>
-                 <y>31</y>
+                 <y>51</y>
                  <width>100</width>
                  <height>20</height>
                 </rect>
@@ -1721,7 +2179,7 @@ p, li { white-space: pre-wrap; }
                <property name="geometry">
                 <rect>
                  <x>413</x>
-                 <y>181</y>
+                 <y>239</y>
                  <width>76</width>
                  <height>20</height>
                 </rect>
@@ -1734,7 +2192,7 @@ p, li { white-space: pre-wrap; }
                <property name="geometry">
                 <rect>
                  <x>30</x>
-                 <y>180</y>
+                 <y>238</y>
                  <width>110</width>
                  <height>22</height>
                 </rect>
@@ -1747,7 +2205,7 @@ p, li { white-space: pre-wrap; }
                <property name="geometry">
                 <rect>
                  <x>150</x>
-                 <y>181</y>
+                 <y>239</y>
                  <width>260</width>
                  <height>20</height>
                 </rect>
@@ -1760,20 +2218,23 @@ p, li { white-space: pre-wrap; }
                <property name="geometry">
                 <rect>
                  <x>150</x>
-                 <y>31</y>
+                 <y>51</y>
                  <width>51</width>
                  <height>20</height>
                 </rect>
                </property>
+               <property name="text">
+                <string>180</string>
+               </property>
                <property name="clearButtonEnabled">
-                <bool>true</bool>
+                <bool>false</bool>
                </property>
               </widget>
               <widget class="QPushButton" name="survTimeSetButton">
                <property name="geometry">
                 <rect>
-                 <x>203</x>
-                 <y>30</y>
+                 <x>202</x>
+                 <y>50</y>
                  <width>41</width>
                  <height>22</height>
                 </rect>
@@ -1782,30 +2243,181 @@ p, li { white-space: pre-wrap; }
                 <string>set</string>
                </property>
               </widget>
-              <widget class="QLabel" name="label_4">
+              <widget class="QLabel" name="survTimeLabel_2">
                <property name="geometry">
                 <rect>
-                 <x>70</x>
-                 <y>250</y>
-                 <width>221</width>
-                 <height>16</height>
+                 <x>40</x>
+                 <y>280</y>
+                 <width>100</width>
+                 <height>20</height>
                 </rect>
                </property>
                <property name="text">
-                <string>ЕБАБНЫЙ РОТ ЭТОГО КАЗИНО</string>
+                <string>Question timer</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                </property>
               </widget>
-              <widget class="QLabel" name="label_7">
+              <widget class="QLineEdit" name="survTimeInp_2">
                <property name="geometry">
                 <rect>
-                 <x>70</x>
+                 <x>150</x>
                  <y>280</y>
-                 <width>221</width>
-                 <height>16</height>
+                 <width>51</width>
+                 <height>20</height>
+                </rect>
+               </property>
+               <property name="clearButtonEnabled">
+                <bool>true</bool>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="survTimeSetButton_2">
+               <property name="geometry">
+                <rect>
+                 <x>203</x>
+                 <y>279</y>
+                 <width>41</width>
+                 <height>22</height>
                 </rect>
                </property>
                <property name="text">
-                <string>ТЫ КТО ТАКОЙ ЧТОБ ЭТО ДЕЛАТЬ</string>
+                <string>set</string>
+               </property>
+              </widget>
+              <widget class="QLabel" name="survTimeLabel_3">
+               <property name="geometry">
+                <rect>
+                 <x>270</x>
+                 <y>51</y>
+                 <width>100</width>
+                 <height>20</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>Switch type</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+              <widget class="QLineEdit" name="survTimeInp_3">
+               <property name="geometry">
+                <rect>
+                 <x>380</x>
+                 <y>51</y>
+                 <width>50</width>
+                 <height>20</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>auto</string>
+               </property>
+               <property name="clearButtonEnabled">
+                <bool>false</bool>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="survTimeSetButton_3">
+               <property name="geometry">
+                <rect>
+                 <x>431</x>
+                 <y>50</y>
+                 <width>41</width>
+                 <height>22</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>set</string>
+               </property>
+              </widget>
+              <widget class="QLabel" name="survTimeLabel_4">
+               <property name="geometry">
+                <rect>
+                 <x>270</x>
+                 <y>81</y>
+                 <width>99</width>
+                 <height>20</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>Survey pin</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+              <widget class="QLineEdit" name="survTimeInp_4">
+               <property name="geometry">
+                <rect>
+                 <x>380</x>
+                 <y>81</y>
+                 <width>50</width>
+                 <height>20</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>0A2X</string>
+               </property>
+               <property name="clearButtonEnabled">
+                <bool>false</bool>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="survTimeSetButton_4">
+               <property name="geometry">
+                <rect>
+                 <x>431</x>
+                 <y>80</y>
+                 <width>40</width>
+                 <height>22</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>set</string>
+               </property>
+              </widget>
+              <widget class="QLabel" name="survTimeLabel_5">
+               <property name="geometry">
+                <rect>
+                 <x>40</x>
+                 <y>81</y>
+                 <width>100</width>
+                 <height>20</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>Survey id</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+              <widget class="QLineEdit" name="survTimeInp_5">
+               <property name="geometry">
+                <rect>
+                 <x>150</x>
+                 <y>81</y>
+                 <width>51</width>
+                 <height>20</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>2</string>
+               </property>
+               <property name="clearButtonEnabled">
+                <bool>false</bool>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="survTimeSetButton_5">
+               <property name="geometry">
+                <rect>
+                 <x>202</x>
+                 <y>80</y>
+                 <width>41</width>
+                 <height>22</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>set</string>
                </property>
               </widget>
              </widget>
@@ -1825,118 +2437,114 @@ p, li { white-space: pre-wrap; }
               </column>
               <item>
                <property name="text">
-                <string>q1</string>
+                <string>survey options</string>
                </property>
                <item>
                 <property name="text">
-                 <string>answ_list</string>
+                 <string>survey timer</string>
                 </property>
                 <item>
                  <property name="text">
-                  <string>a1</string>
-                 </property>
-                 <item>
-                  <property name="text">
-                   <string>corret?</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>Новый дочерний элемент</string>
-                  </property>
-                 </item>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>a2</string>
-                 </property>
-                 <item>
-                  <property name="text">
-                   <string>Новый дочерний элемент</string>
-                  </property>
-                 </item>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>a3</string>
+                  <string>180</string>
                  </property>
                 </item>
                </item>
                <item>
                 <property name="text">
-                 <string>opt</string>
+                 <string>pin</string>
                 </property>
                 <item>
                  <property name="text">
-                  <string>mult answ?</string>
+                  <string>0A2X</string>
                  </property>
                 </item>
+               </item>
+               <item>
+                <property name="text">
+                 <string>type</string>
+                </property>
                 <item>
                  <property name="text">
-                  <string>opt_1</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>opt2</string>
+                  <string>auto</string>
                  </property>
                 </item>
                </item>
               </item>
               <item>
                <property name="text">
-                <string>q2</string>
+                <string>questions</string>
                </property>
+               <item>
+                <property name="text">
+                 <string>question_1</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>What is NAO?</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>answer list</string>
+                 </property>
+                 <item>
+                  <property name="text">
+                   <string>Humanoid robot</string>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string>correct</string>
+                   </property>
+                  </item>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>National Audit Office</string>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string>incorrect</string>
+                   </property>
+                  </item>
+                 </item>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>question options</string>
+                 </property>
+                 <item>
+                  <property name="text">
+                   <string>multiply answer</string>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string>false</string>
+                   </property>
+                  </item>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>question timer</string>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string>20</string>
+                   </property>
+                  </item>
+                 </item>
+                </item>
+               </item>
+               <item>
+                <property name="text">
+                 <string>q2</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>q3</string>
+                </property>
+               </item>
               </item>
-              <item>
-               <property name="text">
-                <string>q3</string>
-               </property>
-              </item>
-             </widget>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-         <widget class="QWidget" name="toolkitTab">
-          <attribute name="title">
-           <string>Toolkit</string>
-          </attribute>
-          <layout class="QVBoxLayout" name="verticalLayout_9">
-           <property name="spacing">
-            <number>5</number>
-           </property>
-           <property name="leftMargin">
-            <number>0</number>
-           </property>
-           <property name="topMargin">
-            <number>0</number>
-           </property>
-           <property name="rightMargin">
-            <number>0</number>
-           </property>
-           <property name="bottomMargin">
-            <number>0</number>
-           </property>
-           <item>
-            <widget class="QWidget" name="widget_5" native="true">
-             <widget class="QLabel" name="label_6">
-              <property name="geometry">
-               <rect>
-                <x>70</x>
-                <y>180</y>
-                <width>671</width>
-                <height>121</height>
-               </rect>
-              </property>
-              <property name="font">
-               <font>
-                <pointsize>25</pointsize>
-               </font>
-              </property>
-              <property name="text">
-               <string>А зачем я сделал эту вкладку :thinking:</string>
-              </property>
              </widget>
             </widget>
            </item>

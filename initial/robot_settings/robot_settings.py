@@ -4,6 +4,7 @@ import threading
 import time
 
 import paramiko as paramiko
+from PySide6.QtGui import QCloseEvent
 from PySide6.QtWidgets import *
 
 from initial.ssh_handler import ShellHandler
@@ -126,6 +127,8 @@ class RobotConnector:
         self.window.findChild(QPushButton, "robConConnectButton").clicked.connect(
             lambda: threading.Thread(target=self.create_connection_handler, args=()).start())
         self.window.findChild(QLineEdit, "robotLineInp").returnPressed.connect(self.robot_console_worker)
+        QCloseEvent
+        self.thread_status
 
     """
     CONSOLE REALISATION
@@ -166,7 +169,6 @@ class RobotConnector:
 
     def update_robot_stats(self):
         while self.thread_status:
-
             self.window.findChild(QLineEdit, "robSysCpuOut").setText(self.connection_handler_single_com(
                 r"""top -b -n2 -p 1 | fgrep "Cpu(s)" | tail -1 | awk -F'id,' -v prefix="$prefix" '{ split($1, vs, ","); v=vs[length(vs)]; sub("%", "", v); printf "%s%.1f%%\n", prefix, 100 - v }'"""
             ))

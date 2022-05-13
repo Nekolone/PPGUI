@@ -20,12 +20,14 @@ class PresentationConnector:
 
         self._pres_status = False
 
+        self._inter_state = False
+
         self.file_list = []
         self._selected_item = None
-        self._pres_dir_path = fr"{os.environ['USERPROFILE']}\Documents\NaoGuiShellStorage"
-        self.pres_dir = QDir(self._pres_dir_path)
+        self.pres_dir_path = fr"{os.environ['USERPROFILE']}\Documents\NaoGuiShellStorage"
+        self.pres_dir = QDir(self.pres_dir_path)
         if not self.pres_dir.exists():
-            self.pres_dir.mkpath(self._pres_dir_path)
+            self.pres_dir.mkpath(self.pres_dir_path)
 
     """
     GETTERS & SETTERS
@@ -39,6 +41,7 @@ class PresentationConnector:
     def pres_status(self, value: bool):
         self.window.findChild(QPushButton, "startPres").setEnabled(not value)
         self.window.findChild(QPushButton, "stopPres").setEnabled(value)
+        self.pres_depend_status(value)
         self._pres_status = value
 
     @property
@@ -59,19 +62,18 @@ class PresentationConnector:
     def update_pres_table(self):
         self.pres_dir = QDir(fr"{os.environ['USERPROFILE']}\Documents\NaoGuiShellStorage")
         self.pres_dir.entryList()
-        # QListWidget.clear
         self.window.findChild(QListWidget, "pptxAvailableTable").clear()
         self.file_list = self.pres_dir.entryList(["*.pptx", QDir.Files])
-        # self.window.findChild(QTableWidget, "pptxAvailableTable").setRowCount(len(self.file_list))
         for fileName, fileNum in zip(self.file_list, range(len(self.file_list))):
-            # print(fileName, fileNum, self.file_list)
             self.window.findChild(QListWidget, "pptxAvailableTable").addItem(QListWidgetItem(fileName))
-            # self.window.findChild(QListWidget, "pptxAvailableTable").
-            # QListWidget.sil
-            # self.window.findChild(QListWidget, "pptxAvailableTable").findItems(fileName, Qt.MatchContains)[0].clicked.connect(lambda: print(fileName))
-            # QListWidgetItem.
-            # self.window.findChild(QTableWidget, "pptxAvailableTable").setItem(fileNum, 0, QTableWidgetItem(fileName))
-            # QListWidgetItem.
+
+    @property
+    def inter_state(self):
+        return self._inter_state
+
+    @inter_state.setter
+    def inter_state(self, value):
+        self._inter_state = value
 
     def validate_cur_pres(self):
         self.window.findChild(QLineEdit, "valStatusOutLine").setText(".")
@@ -94,13 +96,6 @@ class PresentationConnector:
     TRIGGERS
     """
 
-    def find_pptx(self):
-        pass
-
-    # def set_file_path(self, label: QLabel):
-    #     filepath = QFileDialog.getOpenFileUrl(caption="Select file")[0].toLocalFile()
-    #     label.setText(filepath)
-
     def setup_triggers(self):
         self.window.findChild(QToolButton, "pptxFindFile").clicked.connect(
             lambda: set_file_path(self.window.findChild(QLineEdit, "pptxPathLine"))
@@ -114,10 +109,7 @@ class PresentationConnector:
             lambda: self.select_presentation(self.new_item_selected())
         )
 
-        """
-        .....
-        """
-
+        self.window.findChild(QCheckBox, "intConnection").clicked.connect(lambda: self.check_int_state())
         self.window.findChild(QLineEdit, "selPresOutLine").textChanged.connect(
             lambda: activate_if_not_blank(self.window.findChild(QLineEdit, "selPresOutLine"),
                                           self.window.findChild(QPushButton, "startPres")))
@@ -154,6 +146,9 @@ class PresentationConnector:
         self.window.findChild(QLineEdit, "valStatusOutLine").setEnabled(True)
         self.window.findChild(QLineEdit, "valStatusOutLine").clear()
 
+    def check_int_state(self):
+        self.inter_state = self.window.findChild(QCheckBox, "intConnection").isChecked()
+
     """
     DESIGN
     """
@@ -163,12 +158,6 @@ class PresentationConnector:
 
     def make_shiny(self):
         self.setup_table()
-        # while self.inf_status:
-        #     time.sleep(1)
 
     def setup_table(self):
         self.update_pres_table()
-        # QListWidget.addItem(self.window.findChild(QPushButton, "pptxAddButton"))
-        # self.window.findChild(QListWidget, "pptxAvailableTable").addItem("123")
-        # self.window.findChild(QTableWidget, "pptxAvailableTable").setColumnWidth(1, 118)
-        # self.window.findChild(QTableWidget, "pptxAvailableTable").setItem(1,1,QTableWidgetItem("зызызыз"))

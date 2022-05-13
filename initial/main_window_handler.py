@@ -1,10 +1,11 @@
-from PySide6.QtWidgets import QWidget
+from PySide6.QtCore import *
+from PySide6.QtWidgets import *
 
 from initial.behaviour_manager.behaviour_manager import BehaviourManager
 from initial.presentation.presentation import PresentationConnector
 from initial.robot_settings.robot_settings import RobotConnector
 from initial.script_manager.script_manager import ScriptManager
-
+from initial.utility import *
 
 
 class MainWindowHandler:
@@ -19,6 +20,12 @@ class MainWindowHandler:
         self.script_manager = ScriptManager(self.set_script_status_dependencies, window)
 
         self.behaviour_manager = BehaviourManager(self.set_script_status_dependencies, window)
+
+        self.p = QProcess()
+        self.p.finished.connect(lambda: self.presentation_stopped())
+
+        self.sp = QProcess()
+        self.sp.finished.connect(lambda: self.presentation_stopped())
 
         self.thread_list = []
 
@@ -44,6 +51,10 @@ class MainWindowHandler:
 
     @presentation_status.setter
     def presentation_status(self, value: bool):
+        if value:
+            self.start_presentation()
+        else:
+            self.stop_presentation()
         self._presentation_status = value
 
     @property
@@ -52,6 +63,10 @@ class MainWindowHandler:
 
     @script_status.setter
     def script_status(self, value: bool):
+        if value:
+            self.start_script()
+        else:
+            self.stop_script()
         self._script_status = value
 
     """
@@ -62,15 +77,13 @@ class MainWindowHandler:
         self.robot_connection.make_shiny()
         self.presentation_connection.make_shiny()
         self.script_manager.make_shiny()
-        self.script_manager.make_shiny()
-        pass
+        # self.script_manager.make_shiny()
 
     def connect(self):
         self.robot_connection.setup_triggers()
         self.presentation_connection.setup_triggers()
         self.script_manager.setup_triggers()
-        self.script_manager.setup_triggers()
-        pass
+        # self.script_manager.setup_triggers()
 
     """
     DEPENDENCIES
@@ -85,3 +98,35 @@ class MainWindowHandler:
 
     def set_script_status_dependencies(self, status: bool):
         self.script_status = status
+
+    """
+    CONTROLLERS
+    """
+
+    def start_presentation(self):
+        self.p.setProgram(r"C:\Users\Nekolone\Desktop\PPGUI\naopptx.exe")
+        args = ["--pr", self.presentation_connection.pres_dir_path + "\\" +
+                self.presentation_connection.selected_item.text(),
+                "--ip", self.robot_connection.ip]
+        if not self.presentation_connection.inter_state:
+            args.append("--no-inet")
+        print(args)
+        self.p.setArguments(args)
+        self.p.start()
+
+    def stop_presentation(self):
+        self.p.kill()
+        pass
+
+    def presentation_stopped(self):
+        self.presentation_connection.pres_status = False
+
+    def start_script(self):
+        self.sp.setProgram("python3")
+        self.robot_connection.connection_handler_single_com(fr"python2.7 {self.script_manager.script_dir_path}")
+        args = [self.script_manager.script_dir_path + "\\" + self.script_manager.selected_item.text()]
+        self.sp.setArguments(args)
+        self.sp.start()
+
+    # def stop_script(self):
+
