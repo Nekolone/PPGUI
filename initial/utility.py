@@ -2,7 +2,7 @@ import os
 import shutil
 import string
 
-from PySide6.QtWidgets import *
+from PySide6.QtWidgets import QLineEdit, QLabel, QFileDialog
 
 
 def activate_if_not_blank(label: QLineEdit, target: QLabel):

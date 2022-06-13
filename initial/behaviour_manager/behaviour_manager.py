@@ -1,15 +1,10 @@
 import ctypes
-import os
-import socket
-import string
+import sys
 import threading
-import time
 
-import paramiko as paramiko
-from PySide6.QtCore import *
-from PySide6.QtWidgets import *
+from PySide6.QtCore import QProcess, Qt
+from PySide6.QtWidgets import QPushButton, QListWidgetItem, QListWidget
 
-from initial.ssh_handler import SecureShellHandler
 from initial.utility import *
 
 CP_console = f"cp{ctypes.cdll.kernel32.GetConsoleOutputCP()}"
@@ -84,11 +79,11 @@ class BehaviourManager:
         # self.output.ensureCursorVisible()
 
     def update_beh_table(self):
-        print(rf'{os.getcwd()}\behaviours.exe')
+        # print(rf'{os.getcwd()}\behaviours.exe')
         # self.beh_proc.readyReadStandardError.connect(self.dataReady)
         self.beh_proc.readyRead.connect(self.dataReady)
         self.beh_proc.readyReadStandardError.connect(lambda: print("dfd"))
-        self.beh_proc.start(rf'{os.getcwd()}\behaviours.exe',['--ip',f'{self.robot_con.ip}'])
+        self.beh_proc.start(rf'{sys._MEIPASS}\behaviours.exe', ['--ip', f'{self.robot_con.ip}'])
 
     # f"""import qi; s = qi.Session(); s.connect("tcp://localhost:9559"); b = s.service("ALBehaviorManager"); b.startBehavior("{}")"""
     """
@@ -112,7 +107,8 @@ class BehaviourManager:
     def start_beh(self):
         start_beh_on_nao = self.window.findChild(QLineEdit, "selBehOutLine").text()
         text = self.window.findChild(QLineEdit, "selBehOutLine").text()
-        command = """python -c \"import qi; s = qi.Session(); s.connect('tcp://localhost:9559'); b = s.service('ALBehaviorManager'); b.startBehavior('{}')\"""".format(text)
+        command = """python -c \"import qi; s = qi.Session(); s.connect('tcp://localhost:9559'); b = s.service('ALBehaviorManager'); b.startBehavior('{}')\"""".format(
+            text)
         print(text)
         print(command)
         threading.Thread(target=self.robot_con.connection_handler, args=(command,)).start()

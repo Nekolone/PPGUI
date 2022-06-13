@@ -1,7 +1,7 @@
-from typing import Type
+import sys
 
-from PySide6.QtCore import *
-from PySide6.QtWidgets import *
+from PySide6.QtCore import QProcess
+from PySide6.QtWidgets import QWidget
 
 from initial.behaviour_manager.behaviour_manager import BehaviourManager, CP_console
 from initial.presentation.presentation import PresentationConnector
@@ -108,7 +108,7 @@ class MainWindowHandler:
 
     def get_beh_list(self) -> QProcess:
         beh_proc = QProcess()
-        beh_proc.setProgram(f"{os.getcwd()}\\behaviours.exe")
+        beh_proc.setProgram(f"{sys._MEIPASS}\\behaviours.exe")
         beh_proc.setArguments(["--ip", self.robot_connection.ip])
         return beh_proc
 
@@ -117,7 +117,7 @@ class MainWindowHandler:
     """
 
     def start_presentation(self):
-        self.p.setProgram(r"C:\Users\Nekolone\Desktop\PPGUI\naopptx.exe")
+        self.p.setProgram(rf"{sys._MEIPASS}\naopptx.exe")
         args = ["--pr", self.presentation_connection.pres_dir_path + "\\" +
                 self.presentation_connection.selected_item.text(),
                 "--ip", self.robot_connection.ip]

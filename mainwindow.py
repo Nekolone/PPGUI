@@ -1,13 +1,11 @@
 # This Python file uses the following encoding: utf-8
 import os
-from pathlib import Path
 import sys
+from pathlib import Path
 
-import PySide6
-from PySide6 import *
-from PySide6.QtWidgets import QApplication, QMainWindow, QListWidget, QListWidgetItem, QWidget
 from PySide6.QtCore import QFile
 from PySide6.QtUiTools import QUiLoader
+from PySide6.QtWidgets import QApplication, QWidget
 
 from initial.main_window_handler import MainWindowHandler
 

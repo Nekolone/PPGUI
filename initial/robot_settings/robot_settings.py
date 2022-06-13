@@ -1,11 +1,9 @@
 import socket
 import string
 import threading
-import time
 
 import paramiko as paramiko
-from PySide6.QtGui import QCloseEvent
-from PySide6.QtWidgets import *
+from PySide6.QtWidgets import QLineEdit, QPushButton, QTextEdit, QGroupBox, QWidget
 
 from initial.ssh_handler import SecureShellHandler
 
