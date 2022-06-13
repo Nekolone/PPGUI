@@ -7,7 +7,7 @@ import paramiko as paramiko
 from PySide6.QtGui import QCloseEvent
 from PySide6.QtWidgets import *
 
-from initial.ssh_handler import ShellHandler
+from initial.ssh_handler import SecureShellHandler
 
 
 class RobotConnector:
@@ -142,7 +142,7 @@ class RobotConnector:
 
     def create_handler(self) -> string:
         try:
-            self.ssh_conn = ShellHandler(self.ip, self.user, self.password)
+            self.ssh_conn = SecureShellHandler(self.ip, self.user, self.password)
             self.connection_handler = lambda v: self.exec_command(v)
             self.connection_handler_single_com = lambda v: self.exec_single_command(v)
             self.connection_status = "CONNECTED"

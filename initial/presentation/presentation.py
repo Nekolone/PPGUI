@@ -8,7 +8,7 @@ import paramiko as paramiko
 from PySide6.QtCore import *
 from PySide6.QtWidgets import *
 
-from initial.ssh_handler import ShellHandler
+from initial.ssh_handler import SecureShellHandler
 from initial.utility import *
 
 

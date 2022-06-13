@@ -8,7 +8,7 @@ import paramiko as paramiko
 from PySide6.QtCore import *
 from PySide6.QtWidgets import *
 
-from initial.ssh_handler import ShellHandler
+from initial.ssh_handler import SecureShellHandler
 from initial.utility import *
 
 
@@ -20,8 +20,8 @@ class ScriptManager:
 
         self._script_status = False
 
-        self.sp = QProcess()
-        self.sp.finished.connect(lambda: self.stop_script())
+        # self.sp = QProcess()
+        # self.sp.finished.connect(lambda: self.stop_script())
 
         self.file_list = []
         self._selected_item = None
@@ -42,6 +42,7 @@ class ScriptManager:
     def script_status(self, value: bool):
         self.window.findChild(QPushButton, "startScript").setEnabled(not value)
         self.window.findChild(QPushButton, "stopScript").setEnabled(value)
+        self.script_depend_status(value)
         self._script_status = value
 
     @property
@@ -120,7 +121,7 @@ class ScriptManager:
 
     def stop_script(self):
         self.script_status = False
-        self.sp.kill()
+        # self.sp.kill()
 
 
     def add_script(self):

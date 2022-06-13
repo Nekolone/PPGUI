@@ -2,7 +2,7 @@ import paramiko
 import re
 
 
-class ShellHandler:
+class SecureShellHandler:
 
     def __init__(self, host, user, psw):
         self.ssh = paramiko.SSHClient()
@@ -19,7 +19,7 @@ class ShellHandler:
     def execute(self, cmd):
         cmd = cmd.strip('\n')
         self.stdin.write(cmd + '\n')
-        finish = 'end of stdOUT buffer. finished with exit status'
+        finish = 'end of buffer'
         echo_cmd = 'echo {} $?'.format(finish)
         self.stdin.write(echo_cmd + '\n')
         shin = self.stdin

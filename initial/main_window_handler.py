@@ -1,10 +1,13 @@
+from typing import Type
+
 from PySide6.QtCore import *
 from PySide6.QtWidgets import *
 
-from initial.behaviour_manager.behaviour_manager import BehaviourManager
+from initial.behaviour_manager.behaviour_manager import BehaviourManager, CP_console
 from initial.presentation.presentation import PresentationConnector
 from initial.robot_settings.robot_settings import RobotConnector
 from initial.script_manager.script_manager import ScriptManager
+from initial.slide_designer.slide_designer import SlideDesigner
 from initial.utility import *
 
 
@@ -19,13 +22,15 @@ class MainWindowHandler:
 
         self.script_manager = ScriptManager(self.set_script_status_dependencies, window)
 
-        self.behaviour_manager = BehaviourManager(self.set_script_status_dependencies, window)
+        self.behaviour_manager = BehaviourManager(self.get_beh_list, window)
+
+        self.slide_manager = SlideDesigner(window)
 
         self.p = QProcess()
         self.p.finished.connect(lambda: self.presentation_stopped())
 
         self.sp = QProcess()
-        self.sp.finished.connect(lambda: self.presentation_stopped())
+        # self.sp.finished.connect(lambda: self.presentation_stopped())
 
         self.thread_list = []
 
@@ -83,7 +88,8 @@ class MainWindowHandler:
         self.robot_connection.setup_triggers()
         self.presentation_connection.setup_triggers()
         self.script_manager.setup_triggers()
-        # self.script_manager.setup_triggers()
+        self.behaviour_manager.setup_triggers()
+        self.slide_manager.setup_triggers()
 
     """
     DEPENDENCIES
@@ -92,12 +98,19 @@ class MainWindowHandler:
     def set_connection_status_dependencies(self, status: bool):
         self.connection_status = status
         self.robot_connection.connection_dependency(status)
+        self.behaviour_manager.update_beh_table()
 
     def set_presentation_status_dependencies(self, status: bool):
         self.presentation_status = status
 
     def set_script_status_dependencies(self, status: bool):
         self.script_status = status
+
+    def get_beh_list(self) -> QProcess:
+        beh_proc = QProcess()
+        beh_proc.setProgram(f"{os.getcwd()}\\behaviours.exe")
+        beh_proc.setArguments(["--ip", self.robot_connection.ip])
+        return beh_proc
 
     """
     CONTROLLERS
@@ -121,12 +134,20 @@ class MainWindowHandler:
     def presentation_stopped(self):
         self.presentation_connection.pres_status = False
 
+    def dataReady(self):
+        print(str(self.sp.readAll().data().decode(CP_console)))
+
     def start_script(self):
-        self.sp.setProgram("python3")
-        self.robot_connection.connection_handler_single_com(fr"python2.7 {self.script_manager.script_dir_path}")
+
+        # self.sp.setProgram("python3")
         args = [self.script_manager.script_dir_path + "\\" + self.script_manager.selected_item.text()]
-        self.sp.setArguments(args)
-        self.sp.start()
+        self.sp.start('python3', args)
+        self.sp.readyRead.connect(self.dataReady)
+        # self.robot_connection.connection_handler_single_com(fr"python2.7 {self.script_manager.script_dir_path}")
+        # self.sp.setArguments(args)
+        # self.sp.start()
+
+    def stop_script(self):
+        self.sp.kill()
 
     # def stop_script(self):
-

@@ -28,10 +28,6 @@ if __name__ == "__main__":
     window = loader.load(ui_file, None)
 
     windowHandler = make_shiny_and_connect_all(window)
-    # windowHandler.window.findChild(PySide6.QtWidgets.QLineEdit, "robotLineEdit").setEnabled(True)
-    # window.findChild(PySide6.QtWidgets.QLineEdit, "robotLineEdit").returnPressed.connect(lambda: print("hihihaha"))
-    # window.main.returnPressed.connect(lambda :print("hihihaha"))
-    # window.findChild(PySide6.QtWidgets.QListWidget, "listWidget").addItem(QListWidgetItem("hihihaha"))
 
     window.show()
     sys.exit(app.exec())
