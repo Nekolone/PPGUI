@@ -16,8 +16,10 @@ CP_console = f"cp{ctypes.cdll.kernel32.GetConsoleOutputCP()}"
 
 
 class BehaviourManager:
-    def __init__(self, beh_depend_status, window):
+    def __init__(self, beh_depend_status, window, robot_con):
         self.window = window
+
+        self.robot_con = robot_con
 
         self.beh_depend_status = beh_depend_status
 
@@ -71,14 +73,24 @@ class BehaviourManager:
         # cursor.movePosition(cursor.MoveOperation.End)
 
         # Here we have to decode the QByteArray
-        print(str(self.beh_proc.readAll().data().decode(CP_console)))
+        print("123")
+        res = str(self.beh_proc.readAll().data().decode(CP_console)).split("\r\n")
+        print(res)
+        self.window.findChild(QListWidget, "benManTable").clear()
+        for r in res[1:]:
+            self.window.findChild(QListWidget, "benManTable").addItem(QListWidgetItem(r))
+        # print(str(self.beh_proc.readAllStandardError().data().decode(CP_console)))
+        # print(str(self.beh_proc.readAllStandardOutput().data().decode(CP_console)))
         # self.output.ensureCursorVisible()
 
     def update_beh_table(self):
+        print(rf'{os.getcwd()}\behaviours.exe')
+        # self.beh_proc.readyReadStandardError.connect(self.dataReady)
         self.beh_proc.readyRead.connect(self.dataReady)
-        self.beh_proc.start(r'C:\Users\Nekolone\Desktop\PPGUI\behaviours.exe')
+        self.beh_proc.readyReadStandardError.connect(lambda: print("dfd"))
+        self.beh_proc.start(rf'{os.getcwd()}\behaviours.exe',['--ip',f'{self.robot_con.ip}'])
 
-
+    # f"""import qi; s = qi.Session(); s.connect("tcp://localhost:9559"); b = s.service("ALBehaviorManager"); b.startBehavior("{}")"""
     """
     TRIGGERS
     """
@@ -98,12 +110,20 @@ class BehaviourManager:
             lambda: self.stop_beh())
 
     def start_beh(self):
-        self.update_beh_table()
+        start_beh_on_nao = self.window.findChild(QLineEdit, "selBehOutLine").text()
+        text = self.window.findChild(QLineEdit, "selBehOutLine").text()
+        command = """python -c \"import qi; s = qi.Session(); s.connect('tcp://localhost:9559'); b = s.service('ALBehaviorManager'); b.startBehavior('{}')\"""".format(text)
+        print(text)
+        print(command)
+        threading.Thread(target=self.robot_con.connection_handler, args=(command,)).start()
+        # self.robot_con.ssh_conn.execute(command)
+        # self.update_beh_table()
         # self.
-        self.beh_status = True
+        # self.beh_status = True
 
     def stop_beh(self):
-        self.beh_status = False
+        self.update_beh_table()
+        # self.beh_status = False
         # self.beh_proc.kill()
 
     def select_beh(self, selected_item: QListWidgetItem):

@@ -127,8 +127,8 @@ class RobotConnector:
         self.window.findChild(QPushButton, "robConConnectButton").clicked.connect(
             lambda: threading.Thread(target=self.create_connection_handler, args=()).start())
         self.window.findChild(QLineEdit, "robotLineInp").returnPressed.connect(self.robot_console_worker)
-        QCloseEvent
-        self.thread_status
+        # QCloseEvent
+        # self.thread_status
 
     """
     CONSOLE REALISATION

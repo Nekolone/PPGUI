@@ -69,7 +69,7 @@
        <item>
         <widget class="QTabWidget" name="tabWidget">
          <property name="currentIndex">
-          <number>5</number>
+          <number>3</number>
          </property>
          <widget class="QWidget" name="robotTab">
           <attribute name="title">
@@ -1315,27 +1315,7 @@ p, li { white-space: pre-wrap; }
                   <widget class="QListWidget" name="benManTable">
                    <item>
                     <property name="text">
-                     <string>1</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>2</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>3</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>4</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>5</string>
+                     <string>PRESS SCAN</string>
                     </property>
                    </item>
                   </widget>
@@ -1419,7 +1399,7 @@ p, li { white-space: pre-wrap; }
                 </widget>
                 <widget class="QPushButton" name="stopBeh">
                  <property name="enabled">
-                  <bool>false</bool>
+                  <bool>true</bool>
                  </property>
                  <property name="geometry">
                   <rect>
@@ -1430,7 +1410,7 @@ p, li { white-space: pre-wrap; }
                   </rect>
                  </property>
                  <property name="text">
-                  <string>Stop</string>
+                  <string>Scan</string>
                  </property>
                 </widget>
                 <widget class="QPushButton" name="delBehButton">

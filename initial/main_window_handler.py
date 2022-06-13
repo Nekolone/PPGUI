@@ -22,7 +22,7 @@ class MainWindowHandler:
 
         self.script_manager = ScriptManager(self.set_script_status_dependencies, window)
 
-        self.behaviour_manager = BehaviourManager(self.get_beh_list, window)
+        self.behaviour_manager = BehaviourManager(self.get_beh_list, window, self.robot_connection)
 
         self.slide_manager = SlideDesigner(window)
 
@@ -98,7 +98,7 @@ class MainWindowHandler:
     def set_connection_status_dependencies(self, status: bool):
         self.connection_status = status
         self.robot_connection.connection_dependency(status)
-        self.behaviour_manager.update_beh_table()
+        # self.behaviour_manager.update_beh_table()
 
     def set_presentation_status_dependencies(self, status: bool):
         self.presentation_status = status
