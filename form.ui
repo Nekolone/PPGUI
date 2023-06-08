@@ -1,0 +1,2440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PPGUI</class>
+ <widget class="QMainWindow" name="PPGUI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>799</width>
+    <height>550</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>799</width>
+    <height>550</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>799</width>
+    <height>550</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>PPGUI</string>
+  </property>
+  <widget class="QWidget" name="mainWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QFrame" name="mainFrame">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QTabWidget" name="tabWidget">
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="robotTab">
+          <attribute name="title">
+           <string>Robot settings</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QWidget" name="robotTabTop" native="true">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>241</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>9999</width>
+               <height>241</height>
+              </size>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_4">
+              <item>
+               <widget class="QGroupBox" name="robConGroupBox">
+                <property name="enabled">
+                 <bool>true</bool>
+                </property>
+                <property name="title">
+                 <string>Connect to robot</string>
+                </property>
+                <widget class="QLabel" name="robConIpLabel">
+                 <property name="geometry">
+                  <rect>
+                   <x>80</x>
+                   <y>50</y>
+                   <width>61</width>
+                   <height>21</height>
+                  </rect>
+                 </property>
+                 <property name="layoutDirection">
+                  <enum>Qt::LeftToRight</enum>
+                 </property>
+                 <property name="text">
+                  <string>ip</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+                <widget class="QLineEdit" name="robConPassInp">
+                 <property name="geometry">
+                  <rect>
+                   <x>170</x>
+                   <y>130</y>
+                   <width>113</width>
+                   <height>22</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="clearButtonEnabled">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="robConConnectButton">
+                 <property name="enabled">
+                  <bool>true</bool>
+                 </property>
+                 <property name="geometry">
+                  <rect>
+                   <x>130</x>
+                   <y>170</y>
+                   <width>120</width>
+                   <height>31</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>Connect</string>
+                 </property>
+                </widget>
+                <widget class="QLineEdit" name="robConIpInp">
+                 <property name="geometry">
+                  <rect>
+                   <x>170</x>
+                   <y>50</y>
+                   <width>113</width>
+                   <height>22</height>
+                  </rect>
+                 </property>
+                 <property name="inputMethodHints">
+                  <set>Qt::ImhDigitsOnly</set>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="clearButtonEnabled">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+                <widget class="QLineEdit" name="robConUserInp">
+                 <property name="geometry">
+                  <rect>
+                   <x>170</x>
+                   <y>90</y>
+                   <width>113</width>
+                   <height>22</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="clearButtonEnabled">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="robConPassLabel">
+                 <property name="geometry">
+                  <rect>
+                   <x>80</x>
+                   <y>130</y>
+                   <width>61</width>
+                   <height>21</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>password</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="robConUserLabel">
+                 <property name="geometry">
+                  <rect>
+                   <x>80</x>
+                   <y>90</y>
+                   <width>61</width>
+                   <height>21</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>user</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+                <widget class="QLineEdit" name="robConStatusOut">
+                 <property name="geometry">
+                  <rect>
+                   <x>250</x>
+                   <y>170</y>
+                   <width>128</width>
+                   <height>30</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="frame">
+                  <bool>false</bool>
+                 </property>
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                 <property name="clearButtonEnabled">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </widget>
+              </item>
+              <item>
+               <widget class="Line" name="line">
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <property name="lineWidth">
+                 <number>0</number>
+                </property>
+                <property name="midLineWidth">
+                 <number>1</number>
+                </property>
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QGroupBox" name="robSysGroupBox">
+                <property name="enabled">
+                 <bool>true</bool>
+                </property>
+                <property name="title">
+                 <string>Device resource usage</string>
+                </property>
+                <widget class="QLineEdit" name="robSysCpuOut">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="geometry">
+                  <rect>
+                   <x>160</x>
+                   <y>50</y>
+                   <width>113</width>
+                   <height>22</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Consolas</family>
+                  </font>
+                 </property>
+                 <property name="inputMethodHints">
+                  <set>Qt::ImhNone</set>
+                 </property>
+                 <property name="text">
+                  <string>0%</string>
+                 </property>
+                 <property name="frame">
+                  <bool>false</bool>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                 </property>
+                 <property name="dragEnabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="robSysUptimeLabel">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="geometry">
+                  <rect>
+                   <x>50</x>
+                   <y>150</y>
+                   <width>91</width>
+                   <height>21</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>uptime</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+                <widget class="QLineEdit" name="robSysUptimeOut">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="geometry">
+                  <rect>
+                   <x>160</x>
+                   <y>150</y>
+                   <width>113</width>
+                   <height>22</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Consolas</family>
+                  </font>
+                 </property>
+                 <property name="inputMethodHints">
+                  <set>Qt::ImhNone</set>
+                 </property>
+                 <property name="text">
+                  <string>0d:0h:0m:0s</string>
+                 </property>
+                 <property name="frame">
+                  <bool>false</bool>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                 </property>
+                 <property name="dragEnabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="robSysRamLabel">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="geometry">
+                  <rect>
+                   <x>80</x>
+                   <y>100</y>
+                   <width>61</width>
+                   <height>21</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>RAM</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="robSysCpuLabel">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="geometry">
+                  <rect>
+                   <x>80</x>
+                   <y>50</y>
+                   <width>61</width>
+                   <height>21</height>
+                  </rect>
+                 </property>
+                 <property name="layoutDirection">
+                  <enum>Qt::LeftToRight</enum>
+                 </property>
+                 <property name="text">
+                  <string>CPU</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="robSysRebootButton">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="geometry">
+                  <rect>
+                   <x>270</x>
+                   <y>150</y>
+                   <width>60</width>
+                   <height>20</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>REBOOT</string>
+                 </property>
+                 <property name="autoDefault">
+                  <bool>false</bool>
+                 </property>
+                 <property name="flat">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+                <widget class="QLineEdit" name="robSysRamOut">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="geometry">
+                  <rect>
+                   <x>160</x>
+                   <y>100</y>
+                   <width>161</width>
+                   <height>22</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Consolas</family>
+                  </font>
+                 </property>
+                 <property name="inputMethodHints">
+                  <set>Qt::ImhNone</set>
+                 </property>
+                 <property name="text">
+                  <string>-M/-M</string>
+                 </property>
+                 <property name="frame">
+                  <bool>false</bool>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                 </property>
+                 <property name="dragEnabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="robotTabBot" native="true">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>9999</width>
+               <height>9999</height>
+              </size>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_3">
+              <property name="spacing">
+               <number>0</number>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QTextEdit" name="robotTextOut">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Consolas</family>
+                  <kerning>true</kerning>
+                 </font>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Sunken</enum>
+                </property>
+                <property name="lineWidth">
+                 <number>1</number>
+                </property>
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+                <property name="html">
+                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Consolas'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="cursorWidth">
+                 <number>1</number>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="robotLineInp">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Consolas</family>
+                  <kerning>true</kerning>
+                 </font>
+                </property>
+                <property name="clearButtonEnabled">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="presentationTab">
+          <attribute name="title">
+           <string>Presentation</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_5">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QWidget" name="presentationTop" native="true">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>72</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>9999</width>
+               <height>72</height>
+              </size>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_7">
+              <property name="topMargin">
+               <number>9</number>
+              </property>
+              <property name="bottomMargin">
+               <number>9</number>
+              </property>
+              <item>
+               <widget class="QGroupBox" name="addPresentation">
+                <property name="minimumSize">
+                 <size>
+                  <width>773</width>
+                  <height>54</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>9999</width>
+                  <height>54</height>
+                 </size>
+                </property>
+                <property name="title">
+                 <string>Add presentation</string>
+                </property>
+                <widget class="QLabel" name="selecyYourPptxFile">
+                 <property name="geometry">
+                  <rect>
+                   <x>210</x>
+                   <y>20</y>
+                   <width>150</width>
+                   <height>20</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Select your .pptx file</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+                <widget class="QLineEdit" name="pptxPathLine">
+                 <property name="geometry">
+                  <rect>
+                   <x>370</x>
+                   <y>21</y>
+                   <width>330</width>
+                   <height>20</height>
+                  </rect>
+                 </property>
+                 <property name="clearButtonEnabled">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+                <widget class="QToolButton" name="pptxFindFile">
+                 <property name="geometry">
+                  <rect>
+                   <x>700</x>
+                   <y>20</y>
+                   <width>22</width>
+                   <height>22</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>...</string>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="pptxAddButton">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="geometry">
+                  <rect>
+                   <x>721</x>
+                   <y>20</y>
+                   <width>40</width>
+                   <height>22</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>Add</string>
+                 </property>
+                </widget>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="presentatioBot" native="true">
+             <property name="maximumSize">
+              <size>
+               <width>9999</width>
+               <height>9999</height>
+              </size>
+             </property>
+             <widget class="QWidget" name="pptxAvailable" native="true">
+              <property name="geometry">
+               <rect>
+                <x>9</x>
+                <y>9</y>
+                <width>384</width>
+                <height>408</height>
+               </rect>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>384</width>
+                <height>408</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>9999</width>
+                <height>9999</height>
+               </size>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_2">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QListWidget" name="pptxAvailableTable">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>408</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QGroupBox" name="pptxCtrlMenu">
+              <property name="geometry">
+               <rect>
+                <x>399</x>
+                <y>1</y>
+                <width>383</width>
+                <height>417</height>
+               </rect>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>417</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>383</width>
+                <height>390</height>
+               </size>
+              </property>
+              <property name="title">
+               <string>Presentation controll menu</string>
+              </property>
+              <property name="flat">
+               <bool>false</bool>
+              </property>
+              <property name="checkable">
+               <bool>false</bool>
+              </property>
+              <widget class="QLabel" name="selPresLabel">
+               <property name="geometry">
+                <rect>
+                 <x>40</x>
+                 <y>90</y>
+                 <width>120</width>
+                 <height>20</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>Selectet presentation</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+              <widget class="QLabel" name="valStatusLabel">
+               <property name="geometry">
+                <rect>
+                 <x>50</x>
+                 <y>170</y>
+                 <width>110</width>
+                 <height>20</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>Validation status</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+              <widget class="QLineEdit" name="selPresOutLine">
+               <property name="geometry">
+                <rect>
+                 <x>180</x>
+                 <y>90</y>
+                 <width>181</width>
+                 <height>22</height>
+                </rect>
+               </property>
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
+               <property name="clearButtonEnabled">
+                <bool>false</bool>
+               </property>
+              </widget>
+              <widget class="QProgressBar" name="presProgressBar">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="geometry">
+                <rect>
+                 <x>190</x>
+                 <y>330</y>
+                 <width>170</width>
+                 <height>20</height>
+                </rect>
+               </property>
+               <property name="layoutDirection">
+                <enum>Qt::LeftToRight</enum>
+               </property>
+               <property name="autoFillBackground">
+                <bool>false</bool>
+               </property>
+               <property name="value">
+                <number>0</number>
+               </property>
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="invertedAppearance">
+                <bool>false</bool>
+               </property>
+               <property name="format">
+                <string>%p%</string>
+               </property>
+              </widget>
+              <widget class="QLabel" name="presProgressLabel">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="geometry">
+                <rect>
+                 <x>40</x>
+                 <y>330</y>
+                 <width>120</width>
+                 <height>20</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>Presentation progress</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+              <widget class="QLineEdit" name="valStatusOutLine">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="geometry">
+                <rect>
+                 <x>180</x>
+                 <y>170</y>
+                 <width>120</width>
+                 <height>22</height>
+                </rect>
+               </property>
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="valPresCheckButton">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="geometry">
+                <rect>
+                 <x>311</x>
+                 <y>169</y>
+                 <width>51</width>
+                 <height>24</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>Validate</string>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="startPres">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="geometry">
+                <rect>
+                 <x>70</x>
+                 <y>280</y>
+                 <width>100</width>
+                 <height>30</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>Start</string>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="stopPres">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="geometry">
+                <rect>
+                 <x>210</x>
+                 <y>280</y>
+                 <width>100</width>
+                 <height>30</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>Stop</string>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="delPresCheckButton">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="geometry">
+                <rect>
+                 <x>311</x>
+                 <y>116</y>
+                 <width>51</width>
+                 <height>24</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>Delete</string>
+               </property>
+              </widget>
+              <widget class="QCheckBox" name="intConnection">
+               <property name="geometry">
+                <rect>
+                 <x>180</x>
+                 <y>120</y>
+                 <width>131</width>
+                 <height>20</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>internet connection</string>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+               <property name="tristate">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="scriptTab">
+          <attribute name="title">
+           <string>Script manager</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_13">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QWidget" name="scriptTop" native="true">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>72</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>72</height>
+              </size>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_4">
+              <item>
+               <widget class="QGroupBox" name="addScript">
+                <property name="minimumSize">
+                 <size>
+                  <width>773</width>
+                  <height>54</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>773</width>
+                  <height>54</height>
+                 </size>
+                </property>
+                <property name="title">
+                 <string>Add script</string>
+                </property>
+                <widget class="QLabel" name="selScriptLabel">
+                 <property name="geometry">
+                  <rect>
+                   <x>230</x>
+                   <y>20</y>
+                   <width>131</width>
+                   <height>20</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Select your script</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+                <widget class="QLineEdit" name="selScriptPathInp">
+                 <property name="geometry">
+                  <rect>
+                   <x>370</x>
+                   <y>21</y>
+                   <width>330</width>
+                   <height>20</height>
+                  </rect>
+                 </property>
+                 <property name="clearButtonEnabled">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+                <widget class="QToolButton" name="scriptFindFile">
+                 <property name="geometry">
+                  <rect>
+                   <x>700</x>
+                   <y>20</y>
+                   <width>22</width>
+                   <height>22</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>...</string>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="scriptAddButton">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="geometry">
+                  <rect>
+                   <x>721</x>
+                   <y>20</y>
+                   <width>40</width>
+                   <height>22</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>Add</string>
+                 </property>
+                </widget>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="scriptBot" native="true">
+             <property name="maximumSize">
+              <size>
+               <width>9999</width>
+               <height>9999</height>
+              </size>
+             </property>
+             <widget class="QWidget" name="pyAvailable" native="true">
+              <property name="geometry">
+               <rect>
+                <x>9</x>
+                <y>9</y>
+                <width>384</width>
+                <height>408</height>
+               </rect>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>384</width>
+                <height>408</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>9999</width>
+                <height>9999</height>
+               </size>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_3">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QListWidget" name="pyAvailableList">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>408</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QGroupBox" name="scriptControllMenu">
+              <property name="geometry">
+               <rect>
+                <x>399</x>
+                <y>1</y>
+                <width>383</width>
+                <height>417</height>
+               </rect>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>417</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>383</width>
+                <height>390</height>
+               </size>
+              </property>
+              <property name="title">
+               <string>Script controll menu</string>
+              </property>
+              <property name="flat">
+               <bool>false</bool>
+              </property>
+              <property name="checkable">
+               <bool>false</bool>
+              </property>
+              <widget class="QLabel" name="selScriptLabel_2">
+               <property name="geometry">
+                <rect>
+                 <x>40</x>
+                 <y>120</y>
+                 <width>120</width>
+                 <height>20</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>Selectet script</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+              <widget class="QLineEdit" name="selScriptOutLine">
+               <property name="geometry">
+                <rect>
+                 <x>180</x>
+                 <y>120</y>
+                 <width>181</width>
+                 <height>22</height>
+                </rect>
+               </property>
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
+               <property name="clearButtonEnabled">
+                <bool>false</bool>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="startScript">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="geometry">
+                <rect>
+                 <x>70</x>
+                 <y>280</y>
+                 <width>100</width>
+                 <height>30</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>Start</string>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="stopScript">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="geometry">
+                <rect>
+                 <x>210</x>
+                 <y>280</y>
+                 <width>100</width>
+                 <height>30</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>Stop</string>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="delScriptButton">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="geometry">
+                <rect>
+                 <x>311</x>
+                 <y>146</y>
+                 <width>51</width>
+                 <height>24</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>Delete</string>
+               </property>
+              </widget>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="behManTab">
+          <attribute name="title">
+           <string>Behaviour manager</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_12">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QWidget" name="behManWidget" native="true">
+             <layout class="QHBoxLayout" name="horizontalLayout_5">
+              <item>
+               <widget class="QWidget" name="behManLeft" native="true">
+                <layout class="QHBoxLayout" name="horizontalLayout_7">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QListWidget" name="benManTable">
+                   <item>
+                    <property name="text">
+                     <string>PRESS SCAN</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QGroupBox" name="behManRight">
+                <property name="minimumSize">
+                 <size>
+                  <width>383</width>
+                  <height>417</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>383</width>
+                  <height>999</height>
+                 </size>
+                </property>
+                <property name="title">
+                 <string>Behaviour controll menu</string>
+                </property>
+                <property name="flat">
+                 <bool>false</bool>
+                </property>
+                <property name="checkable">
+                 <bool>false</bool>
+                </property>
+                <widget class="QLabel" name="selBehLabel">
+                 <property name="geometry">
+                  <rect>
+                   <x>40</x>
+                   <y>120</y>
+                   <width>120</width>
+                   <height>20</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>Selectet behaviour</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+                <widget class="QLineEdit" name="selBehOutLine">
+                 <property name="geometry">
+                  <rect>
+                   <x>180</x>
+                   <y>120</y>
+                   <width>181</width>
+                   <height>22</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                 <property name="clearButtonEnabled">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="startBeh">
+                 <property name="enabled">
+                  <bool>true</bool>
+                 </property>
+                 <property name="geometry">
+                  <rect>
+                   <x>70</x>
+                   <y>280</y>
+                   <width>100</width>
+                   <height>30</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>Start</string>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="stopBeh">
+                 <property name="enabled">
+                  <bool>true</bool>
+                 </property>
+                 <property name="geometry">
+                  <rect>
+                   <x>210</x>
+                   <y>280</y>
+                   <width>100</width>
+                   <height>30</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>Scan</string>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="delBehButton">
+                 <property name="enabled">
+                  <bool>true</bool>
+                 </property>
+                 <property name="geometry">
+                  <rect>
+                   <x>311</x>
+                   <y>146</y>
+                   <width>51</width>
+                   <height>24</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>Delete</string>
+                 </property>
+                </widget>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="slideTab">
+          <attribute name="title">
+           <string>Slide designer</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_6">
+           <property name="spacing">
+            <number>5</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QWidget" name="slideTop" native="true">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>161</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>9999</width>
+               <height>161</height>
+              </size>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_11">
+              <item>
+               <widget class="QTextEdit" name="slideNoteOut">
+                <property name="html">
+                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="slideBot" native="true">
+             <layout class="QGridLayout" name="gridLayout">
+              <item row="0" column="2">
+               <widget class="QWidget" name="widget" native="true">
+                <property name="maximumSize">
+                 <size>
+                  <width>185</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_14">
+                 <item>
+                  <widget class="QPushButton" name="nextButton">
+                   <property name="toolTip">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#24292f; background-color:#ffffff;&quot;&gt;trigger slide transition &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#24292f; background-color:#ffffff;&quot;&gt;example:&lt;br/&gt;&amp;lt;&lt;/span&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#000000; background-color:#ffffff;&quot;&gt;next&lt;/span&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#24292f; background-color:#ffffff;&quot;&gt;/&amp;gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="statusTip">
+                    <string/>
+                   </property>
+                   <property name="whatsThis">
+                    <string/>
+                   </property>
+                   <property name="accessibleName">
+                    <string/>
+                   </property>
+                   <property name="accessibleDescription">
+                    <string/>
+                   </property>
+                   <property name="text">
+                    <string>NEXT</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="0" column="3">
+               <widget class="QWidget" name="widget_13" native="true">
+                <property name="maximumSize">
+                 <size>
+                  <width>185</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_26">
+                 <item>
+                  <widget class="QPushButton" name="pauseButton">
+                   <property name="toolTip">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#000000; vertical-align:top;&quot;&gt;pause speech &lt;br/&gt;(default 100ms, 0.1s)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#000000; vertical-align:top;&quot;&gt;example:&lt;br/&gt;&amp;lt;pause/&amp;gt; &lt;br/&gt;&amp;lt;pause time=&amp;quot;150&amp;quot;/&amp;gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="statusTip">
+                    <string/>
+                   </property>
+                   <property name="whatsThis">
+                    <string/>
+                   </property>
+                   <property name="accessibleName">
+                    <string/>
+                   </property>
+                   <property name="accessibleDescription">
+                    <string/>
+                   </property>
+                   <property name="text">
+                    <string>PAUSE</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="pauseLine"/>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="0" column="4">
+               <widget class="QWidget" name="widget_12" native="true">
+                <property name="maximumSize">
+                 <size>
+                  <width>185</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_25">
+                 <item>
+                  <widget class="QPushButton" name="rmodeButton">
+                   <property name="toolTip">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#24292f; background-color:#ffffff;&quot;&gt;set reading mode&lt;br/&gt;(defalut sentence)&lt;br/&gt;mode - &lt;/span&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#24292f; background-color:#ffffff;&quot;&gt;word/sent/char&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#24292f; background-color:#ffffff;&quot;&gt;example:&lt;br/&gt;&amp;lt;rmode mode=&amp;quot;word&amp;quot;/&amp;gt;&lt;br/&gt;&amp;lt;rmode mode=&amp;quot;word&amp;quot;&amp;gt; ... &amp;lt;/rmode&amp;gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="statusTip">
+                    <string/>
+                   </property>
+                   <property name="whatsThis">
+                    <string/>
+                   </property>
+                   <property name="accessibleName">
+                    <string/>
+                   </property>
+                   <property name="accessibleDescription">
+                    <string/>
+                   </property>
+                   <property name="text">
+                    <string>READ MODE</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="rmodeLine"/>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="4" column="3">
+               <widget class="QWidget" name="widget_7" native="true">
+                <property name="maximumSize">
+                 <size>
+                  <width>185</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_20">
+                 <item>
+                  <widget class="QPushButton" name="volumeButton">
+                   <property name="toolTip">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#24292f; background-color:#ffffff;&quot;&gt;set volume&lt;br/&gt;(default 100%)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#24292f; background-color:#ffffff;&quot;&gt;example:&lt;br/&gt;&lt;/span&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#24292f; background-color:#ffffff;&quot;&gt;&amp;lt;vol value=&amp;quot;69&amp;quot;/&amp;gt;&lt;br/&gt;&amp;lt;vol value=&amp;quot;69&amp;quot;&amp;gt; .... &amp;lt;/vol&amp;gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="statusTip">
+                    <string/>
+                   </property>
+                   <property name="whatsThis">
+                    <string/>
+                   </property>
+                   <property name="accessibleName">
+                    <string/>
+                   </property>
+                   <property name="accessibleDescription">
+                    <string/>
+                   </property>
+                   <property name="text">
+                    <string>VOLUME</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="volumeLine"/>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="2" column="3">
+               <widget class="QWidget" name="widget_10" native="true">
+                <property name="maximumSize">
+                 <size>
+                  <width>185</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_23">
+                 <item>
+                  <widget class="QPushButton" name="setButton">
+                   <property name="toolTip">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#24292f; background-color:#ffffff;&quot;&gt;user for settings semi global values&lt;br/&gt;voice - neutral/joyful/didactic (set voice for speech)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#000000; vertical-align:top;&quot;&gt;example:&lt;br/&gt;&lt;/span&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#24292f; background-color:#ffffff;&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#000000; background-color:#ffffff;&quot;&gt;set voice=&amp;quot;neutral&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#24292f; background-color:#ffffff;&quot;&gt;/&amp;gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="statusTip">
+                    <string/>
+                   </property>
+                   <property name="whatsThis">
+                    <string/>
+                   </property>
+                   <property name="accessibleName">
+                    <string/>
+                   </property>
+                   <property name="accessibleDescription">
+                    <string/>
+                   </property>
+                   <property name="text">
+                    <string>SET</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="setLine"/>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="4" column="4">
+               <widget class="QWidget" name="widget_8" native="true">
+                <property name="maximumSize">
+                 <size>
+                  <width>185</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_21">
+                 <item>
+                  <widget class="QPushButton" name="rspdButton">
+                   <property name="toolTip">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#24292f; background-color:#ffffff;&quot;&gt;set reading speed&lt;br/&gt;(defalut 100)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#24292f; background-color:#ffffff;&quot;&gt;example:&lt;/span&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#24292f; background-color:#ffffff;&quot;&gt;&lt;br/&gt;&amp;lt;rspd speed=&amp;quot;42&amp;quot;/&amp;gt;&lt;br/&gt;&amp;lt;rspd speed=&amp;quot;42&amp;quot;&amp;gt; ... &amp;lt;/rspd&amp;gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="statusTip">
+                    <string/>
+                   </property>
+                   <property name="whatsThis">
+                    <string/>
+                   </property>
+                   <property name="accessibleName">
+                    <string/>
+                   </property>
+                   <property name="accessibleDescription">
+                    <string/>
+                   </property>
+                   <property name="text">
+                    <string>READ SPEED</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="rspdLine"/>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="2" column="6">
+               <widget class="QWidget" name="widget_11" native="true">
+                <property name="maximumSize">
+                 <size>
+                  <width>185</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_24">
+                 <item>
+                  <widget class="QPushButton" name="doButton">
+                   <property name="toolTip">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#24292f; background-color:#ffffff;&quot;&gt;for executing animations&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#24292f; background-color:#ffffff;&quot;&gt;example:&lt;/span&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#24292f; background-color:#ffffff;&quot;&gt;&lt;br/&gt;&amp;lt;do animation=&amp;quot;path&amp;quot;/&amp;gt;&lt;br/&gt;&amp;lt;do animation=&amp;quot;path&amp;quot;&amp;gt; .... &amp;lt;/do&amp;gt;&lt;br/&gt;&amp;lt;do &lt;/span&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#24292f; background-color:#ffffff;&quot;&gt;behavior&lt;/span&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#24292f; background-color:#ffffff;&quot;&gt;=&amp;quot;path&amp;quot;/&amp;gt;&lt;br/&gt;&amp;lt;do &lt;/span&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#24292f; background-color:#ffffff;&quot;&gt;behavior&lt;/span&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#24292f; background-color:#ffffff;&quot;&gt;=&amp;quot;path&amp;quot;&amp;gt; .... &amp;lt;/do&amp;gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="statusTip">
+                    <string/>
+                   </property>
+                   <property name="whatsThis">
+                    <string/>
+                   </property>
+                   <property name="accessibleName">
+                    <string/>
+                   </property>
+                   <property name="accessibleDescription">
+                    <string/>
+                   </property>
+                   <property name="text">
+                    <string>DO</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="doLine"/>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="2" column="2">
+               <widget class="QWidget" name="widget_2" native="true">
+                <property name="maximumSize">
+                 <size>
+                  <width>185</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_16">
+                 <item>
+                  <widget class="QPushButton" name="videoButton">
+                   <property name="toolTip">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#24292f; background-color:#ffffff;&quot;&gt;start video playback&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#24292f; background-color:#ffffff;&quot;&gt;example:&lt;br/&gt;&amp;lt;&lt;/span&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#000000; background-color:#ffffff;&quot;&gt;video&lt;/span&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#24292f; background-color:#ffffff;&quot;&gt;/&amp;gt;&lt;br/&gt;&amp;lt;&lt;/span&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#000000; background-color:#ffffff;&quot;&gt;video&lt;/span&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#24292f; background-color:#ffffff;&quot;&gt;&amp;gt; .... &amp;lt;/&lt;/span&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#000000; background-color:#ffffff;&quot;&gt;video&lt;/span&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#24292f; background-color:#ffffff;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="statusTip">
+                    <string/>
+                   </property>
+                   <property name="whatsThis">
+                    <string/>
+                   </property>
+                   <property name="accessibleName">
+                    <string/>
+                   </property>
+                   <property name="accessibleDescription">
+                    <string/>
+                   </property>
+                   <property name="text">
+                    <string>VIDEO</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="4" column="2">
+               <widget class="QWidget" name="widget_3" native="true">
+                <property name="maximumSize">
+                 <size>
+                  <width>185</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_17">
+                 <item>
+                  <widget class="QPushButton" name="audioButton">
+                   <property name="toolTip">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#24292f; background-color:#ffffff;&quot;&gt;start audio playback&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#24292f; background-color:#ffffff;&quot;&gt;example:&lt;br/&gt;&amp;lt;audio/&amp;gt;&lt;br/&gt;&amp;lt;audio&amp;gt; .... &amp;lt;/audio&amp;gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="statusTip">
+                    <string/>
+                   </property>
+                   <property name="whatsThis">
+                    <string/>
+                   </property>
+                   <property name="accessibleName">
+                    <string/>
+                   </property>
+                   <property name="accessibleDescription">
+                    <string/>
+                   </property>
+                   <property name="text">
+                    <string>AUDIO</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="0" column="6">
+               <widget class="QWidget" name="widget_4" native="true">
+                <property name="maximumSize">
+                 <size>
+                  <width>185</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_18">
+                 <item>
+                  <widget class="QPushButton" name="surveyButton">
+                   <property name="toolTip">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#24292f; background-color:#ffffff;&quot;&gt;creates and opens survey&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#24292f; background-color:#ffffff;&quot;&gt;example:&lt;br/&gt;&amp;lt;&lt;/span&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#000000; background-color:#ffffff;&quot;&gt;startsurvey id=&amp;quot;2&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#24292f; background-color:#ffffff;&quot;&gt;&amp;gt; -&amp;gt; survey code here &amp;lt;- &amp;lt;/&lt;/span&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#000000; background-color:#ffffff;&quot;&gt;startsurvey&lt;/span&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#24292f; background-color:#ffffff;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="statusTip">
+                    <string/>
+                   </property>
+                   <property name="whatsThis">
+                    <string/>
+                   </property>
+                   <property name="accessibleName">
+                    <string/>
+                   </property>
+                   <property name="accessibleDescription">
+                    <string/>
+                   </property>
+                   <property name="text">
+                    <string>SURVEY</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="surveyLine"/>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="2" column="4">
+               <widget class="QWidget" name="widget_9" native="true">
+                <property name="maximumSize">
+                 <size>
+                  <width>185</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_22">
+                 <item>
+                  <widget class="QPushButton" name="empButton">
+                   <property name="toolTip">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#24292f; background-color:#ffffff;&quot;&gt;set emphasis for word&lt;br/&gt;pos - 0/1/2&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#24292f; background-color:#ffffff;&quot;&gt;example:&lt;br/&gt;&amp;lt;emph word=&amp;quot;TSI&amp;quot; pos=&amp;quot;2&amp;quot;/&amp;gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="statusTip">
+                    <string/>
+                   </property>
+                   <property name="whatsThis">
+                    <string/>
+                   </property>
+                   <property name="accessibleName">
+                    <string/>
+                   </property>
+                   <property name="accessibleDescription">
+                    <string/>
+                   </property>
+                   <property name="text">
+                    <string>EMPHASIS</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="empLine"/>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="4" column="6">
+               <widget class="QWidget" name="widget_6" native="true">
+                <property name="maximumSize">
+                 <size>
+                  <width>185</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_19">
+                 <item>
+                  <widget class="QPushButton" name="resetButton">
+                   <property name="toolTip">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#24292f; background-color:#ffffff;&quot;&gt;set default to all parametrs&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#24292f; background-color:#ffffff;&quot;&gt;example:&lt;br/&gt;&lt;/span&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#24292f; background-color:#ffffff;&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#000000; background-color:#ffffff;&quot;&gt;rst&lt;/span&gt;&lt;span style=&quot; font-family:'ui-monospace','SFMono-Regular','SF Mono','Menlo','Consolas','Liberation Mono','monospace'; font-size:12px; color:#24292f; background-color:#ffffff;&quot;&gt;/&amp;gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="statusTip">
+                    <string/>
+                   </property>
+                   <property name="whatsThis">
+                    <string/>
+                   </property>
+                   <property name="accessibleName">
+                    <string/>
+                   </property>
+                   <property name="accessibleDescription">
+                    <string/>
+                   </property>
+                   <property name="text">
+                    <string>RESET</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="surveyTab">
+          <attribute name="title">
+           <string>Survey designer</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_8">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QWidget" name="surveyTop" native="true">
+             <property name="maximumSize">
+              <size>
+               <width>9999</width>
+               <height>161</height>
+              </size>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_10">
+              <item>
+               <widget class="QTextEdit" name="surveyOut">
+                <property name="html">
+                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&amp;lt;survey id=&amp;quot;2&amp;quot;&amp;gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    &amp;lt;pin&amp;gt;0A2X&amp;lt;/pin&amp;gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    &amp;lt;type&amp;gt;auto&amp;lt;/type&amp;gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    &lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&amp;lt;/survey&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="surveyBot" native="true">
+             <widget class="QGroupBox" name="surveyController">
+              <property name="geometry">
+               <rect>
+                <x>286</x>
+                <y>0</y>
+                <width>496</width>
+                <height>329</height>
+               </rect>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>496</width>
+                <height>329</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>496</width>
+                <height>329</height>
+               </size>
+              </property>
+              <property name="title">
+               <string>Survey constructor</string>
+              </property>
+              <widget class="QPushButton" name="survAddQButton">
+               <property name="geometry">
+                <rect>
+                 <x>30</x>
+                 <y>158</y>
+                 <width>110</width>
+                 <height>22</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>Add new question</string>
+               </property>
+              </widget>
+              <widget class="QLabel" name="selUnitLabel">
+               <property name="geometry">
+                <rect>
+                 <x>40</x>
+                 <y>208</y>
+                 <width>100</width>
+                 <height>20</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>Selected unit</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+              <widget class="QLineEdit" name="selUnitOut">
+               <property name="geometry">
+                <rect>
+                 <x>150</x>
+                 <y>208</y>
+                 <width>260</width>
+                 <height>20</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="frame">
+                <bool>false</bool>
+               </property>
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
+              </widget>
+              <widget class="QLineEdit" name="survQInp">
+               <property name="geometry">
+                <rect>
+                 <x>150</x>
+                 <y>159</y>
+                 <width>260</width>
+                 <height>20</height>
+                </rect>
+               </property>
+               <property name="clearButtonEnabled">
+                <bool>true</bool>
+               </property>
+              </widget>
+              <widget class="QCheckBox" name="survMultiQCB">
+               <property name="geometry">
+                <rect>
+                 <x>413</x>
+                 <y>159</y>
+                 <width>76</width>
+                 <height>20</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>multiple</string>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="delSelectedItemButton">
+               <property name="geometry">
+                <rect>
+                 <x>412</x>
+                 <y>207</y>
+                 <width>61</width>
+                 <height>22</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>delete</string>
+               </property>
+              </widget>
+              <widget class="QLabel" name="survTimeLabel">
+               <property name="geometry">
+                <rect>
+                 <x>40</x>
+                 <y>58</y>
+                 <width>100</width>
+                 <height>20</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>Total survey timer</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+              <widget class="QCheckBox" name="survCorrAnswCB">
+               <property name="geometry">
+                <rect>
+                 <x>413</x>
+                 <y>259</y>
+                 <width>76</width>
+                 <height>20</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>correct</string>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="survAddAnswButton">
+               <property name="geometry">
+                <rect>
+                 <x>30</x>
+                 <y>258</y>
+                 <width>110</width>
+                 <height>22</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>Add answer</string>
+               </property>
+              </widget>
+              <widget class="QLineEdit" name="survAnswInp">
+               <property name="geometry">
+                <rect>
+                 <x>150</x>
+                 <y>259</y>
+                 <width>260</width>
+                 <height>20</height>
+                </rect>
+               </property>
+               <property name="clearButtonEnabled">
+                <bool>true</bool>
+               </property>
+              </widget>
+              <widget class="QLineEdit" name="survTimeInp">
+               <property name="geometry">
+                <rect>
+                 <x>150</x>
+                 <y>58</y>
+                 <width>51</width>
+                 <height>20</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="clearButtonEnabled">
+                <bool>false</bool>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="survTimeSetButton">
+               <property name="geometry">
+                <rect>
+                 <x>202</x>
+                 <y>57</y>
+                 <width>41</width>
+                 <height>22</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>set</string>
+               </property>
+              </widget>
+              <widget class="QLabel" name="survTypeLabel">
+               <property name="geometry">
+                <rect>
+                 <x>270</x>
+                 <y>58</y>
+                 <width>100</width>
+                 <height>20</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>Switch type</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+              <widget class="QLineEdit" name="survTypeInp">
+               <property name="geometry">
+                <rect>
+                 <x>380</x>
+                 <y>58</y>
+                 <width>50</width>
+                 <height>20</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>auto</string>
+               </property>
+               <property name="clearButtonEnabled">
+                <bool>false</bool>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="survTypeSetButton">
+               <property name="geometry">
+                <rect>
+                 <x>431</x>
+                 <y>57</y>
+                 <width>41</width>
+                 <height>22</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>set</string>
+               </property>
+              </widget>
+              <widget class="QLabel" name="survPinLabel">
+               <property name="geometry">
+                <rect>
+                 <x>270</x>
+                 <y>88</y>
+                 <width>99</width>
+                 <height>20</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>Survey pin</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+              <widget class="QLineEdit" name="survPinInp">
+               <property name="geometry">
+                <rect>
+                 <x>380</x>
+                 <y>88</y>
+                 <width>50</width>
+                 <height>20</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>0A2X</string>
+               </property>
+               <property name="clearButtonEnabled">
+                <bool>false</bool>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="survPinSetButton">
+               <property name="geometry">
+                <rect>
+                 <x>431</x>
+                 <y>87</y>
+                 <width>40</width>
+                 <height>22</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>set</string>
+               </property>
+              </widget>
+              <widget class="QLabel" name="survIdLabel">
+               <property name="geometry">
+                <rect>
+                 <x>40</x>
+                 <y>88</y>
+                 <width>100</width>
+                 <height>20</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>Survey id</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+              <widget class="QLineEdit" name="survIdInp">
+               <property name="geometry">
+                <rect>
+                 <x>150</x>
+                 <y>88</y>
+                 <width>51</width>
+                 <height>20</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>2</string>
+               </property>
+               <property name="clearButtonEnabled">
+                <bool>false</bool>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="survIdSetButton">
+               <property name="geometry">
+                <rect>
+                 <x>202</x>
+                 <y>87</y>
+                 <width>41</width>
+                 <height>22</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>set</string>
+               </property>
+              </widget>
+             </widget>
+             <widget class="QTreeWidget" name="surveyTreeWidget">
+              <property name="geometry">
+               <rect>
+                <x>9</x>
+                <y>8</y>
+                <width>271</width>
+                <height>320</height>
+               </rect>
+              </property>
+              <column>
+               <property name="text">
+                <string>Survey</string>
+               </property>
+              </column>
+              <item>
+               <property name="text">
+                <string>survey options</string>
+               </property>
+               <item>
+                <property name="text">
+                 <string>pin</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>0A2X</string>
+                 </property>
+                </item>
+               </item>
+               <item>
+                <property name="text">
+                 <string>type</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>auto</string>
+                 </property>
+                </item>
+               </item>
+              </item>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <tabstops>
+  <tabstop>robConIpInp</tabstop>
+  <tabstop>robConUserInp</tabstop>
+  <tabstop>robConPassInp</tabstop>
+  <tabstop>robConConnectButton</tabstop>
+  <tabstop>robotLineInp</tabstop>
+  <tabstop>pptxPathLine</tabstop>
+  <tabstop>pptxFindFile</tabstop>
+  <tabstop>pptxAddButton</tabstop>
+  <tabstop>startPres</tabstop>
+  <tabstop>selScriptPathInp</tabstop>
+  <tabstop>scriptFindFile</tabstop>
+  <tabstop>scriptAddButton</tabstop>
+  <tabstop>startScript</tabstop>
+  <tabstop>startBeh</tabstop>
+  <tabstop>robSysUptimeOut</tabstop>
+  <tabstop>pptxAvailableTable</tabstop>
+  <tabstop>selPresOutLine</tabstop>
+  <tabstop>valStatusOutLine</tabstop>
+  <tabstop>valPresCheckButton</tabstop>
+  <tabstop>robSysRebootButton</tabstop>
+  <tabstop>stopPres</tabstop>
+  <tabstop>delPresCheckButton</tabstop>
+  <tabstop>intConnection</tabstop>
+  <tabstop>robSysRamOut</tabstop>
+  <tabstop>robotTextOut</tabstop>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>pyAvailableList</tabstop>
+  <tabstop>selScriptOutLine</tabstop>
+  <tabstop>robConStatusOut</tabstop>
+  <tabstop>stopScript</tabstop>
+  <tabstop>delScriptButton</tabstop>
+  <tabstop>benManTable</tabstop>
+  <tabstop>selBehOutLine</tabstop>
+  <tabstop>robSysCpuOut</tabstop>
+  <tabstop>stopBeh</tabstop>
+  <tabstop>delBehButton</tabstop>
+  <tabstop>slideNoteOut</tabstop>
+  <tabstop>rmodeButton</tabstop>
+  <tabstop>rmodeLine</tabstop>
+  <tabstop>setButton</tabstop>
+  <tabstop>setLine</tabstop>
+  <tabstop>empButton</tabstop>
+  <tabstop>empLine</tabstop>
+  <tabstop>surveyButton</tabstop>
+  <tabstop>surveyLine</tabstop>
+  <tabstop>audioButton</tabstop>
+  <tabstop>doButton</tabstop>
+  <tabstop>doLine</tabstop>
+  <tabstop>resetButton</tabstop>
+  <tabstop>rspdButton</tabstop>
+  <tabstop>rspdLine</tabstop>
+  <tabstop>volumeButton</tabstop>
+  <tabstop>volumeLine</tabstop>
+  <tabstop>videoButton</tabstop>
+  <tabstop>nextButton</tabstop>
+  <tabstop>pauseButton</tabstop>
+  <tabstop>pauseLine</tabstop>
+  <tabstop>surveyOut</tabstop>
+  <tabstop>survAddQButton</tabstop>
+  <tabstop>selUnitOut</tabstop>
+  <tabstop>survQInp</tabstop>
+  <tabstop>survMultiQCB</tabstop>
+  <tabstop>delSelectedItemButton</tabstop>
+  <tabstop>survCorrAnswCB</tabstop>
+  <tabstop>survAddAnswButton</tabstop>
+  <tabstop>survAnswInp</tabstop>
+  <tabstop>survTimeInp</tabstop>
+  <tabstop>survTimeSetButton</tabstop>
+  <tabstop>survTypeInp</tabstop>
+  <tabstop>survTypeSetButton</tabstop>
+  <tabstop>survPinInp</tabstop>
+  <tabstop>survPinSetButton</tabstop>
+  <tabstop>survIdInp</tabstop>
+  <tabstop>survIdSetButton</tabstop>
+  <tabstop>surveyTreeWidget</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

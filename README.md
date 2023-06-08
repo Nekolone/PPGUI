@@ -1,4 +1,5 @@
 #PPGUI
+```pyinstaller -F --add-data "form.ui;." --add-data "behaviours.exe;." --add-data "naopptx.exe;." mainwindow.py --name PPGUI```
 
 lorem ipsum
 
